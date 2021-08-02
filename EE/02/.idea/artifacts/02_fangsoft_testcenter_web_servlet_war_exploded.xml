@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="02_fangsoft_testcenter_web_servlet:war exploded">
+    <output-path>$PROJECT_DIR$/../../../software/apache-tomcat-10.0.8/webapps</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="02_fangsoft_testcenter_web_servlet/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="02_fangsoft_testcenter_web_servlet" />
+          <element id="module-output" name="00_fangsoft_testcenter_domain" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="testng" module-name="02_fangsoft_testcenter_web_servlet" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

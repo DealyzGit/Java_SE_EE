@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/07.iml" filepath="$PROJECT_DIR$/.idea/07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_fangsoft_testcenter_net_client/07_fangsoft_testcenter_net_client.iml" filepath="$PROJECT_DIR$/07_fangsoft_testcenter_net_client/07_fangsoft_testcenter_net_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_fangsoft_testcenter_net_common/07_fangsoft_testcenter_net_common.iml" filepath="$PROJECT_DIR$/07_fangsoft_testcenter_net_common/07_fangsoft_testcenter_net_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_fangsoft_testcenter_net_server/07_fangsoft_testcenter_net_server.iml" filepath="$PROJECT_DIR$/07_fangsoft_testcenter_net_server/07_fangsoft_testcenter_net_server.iml" />
+    </modules>
+  </component>
+</project>

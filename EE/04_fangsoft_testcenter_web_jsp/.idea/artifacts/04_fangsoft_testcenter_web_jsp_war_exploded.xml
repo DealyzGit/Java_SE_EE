@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="04_fangsoft_testcenter_web_jsp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/04_fangsoft_testcenter_web_jsp_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="04_fangsoft_testcenter_web_jsp" />
+          <element id="module-output" name="00_fangsoft_testcenter_domain" />
+          <element id="module-output" name="02_fangsoft_web_util" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="04_fangsoft_testcenter_web_jsp/web/Web" />
+    </root>
+  </artifact>
+</component>

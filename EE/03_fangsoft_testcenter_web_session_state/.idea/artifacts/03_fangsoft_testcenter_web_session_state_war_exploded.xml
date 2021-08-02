@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="03_fangsoft_testcenter_web_session_state:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/03_fangsoft_testcenter_web_session_state_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="03_fangsoft_testcenter_web_session_state" />
+          <element id="module-output" name="00_fangsoft_testcenter_domain" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="03_fangsoft_testcenter_web_session_state/web/Web" />
+    </root>
+  </artifact>
+</component>
