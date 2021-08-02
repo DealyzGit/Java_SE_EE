@@ -20,6 +20,11 @@ import java.util.*;
 public class CommitTestServlet extends TestCenterServlet {
     protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        if (!this.isLogined(request, response)) {
+            this.processNotLogin(request, response);
+            return;//必须在此return，已在processNotLogin中重定向请求
+        }
+
         HttpSession session = request.getSession(false);
         TestResult testResult = null;
         int trId = -1;

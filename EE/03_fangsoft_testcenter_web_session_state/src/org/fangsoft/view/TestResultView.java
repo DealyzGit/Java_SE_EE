@@ -88,7 +88,7 @@ public class TestResultView extends HtmlView {
         writer.println("");
         writer.println("        <td width=49%>");
 //      writer.println("            tong");
-        writer.println(this.getTestResult() == null ? "N/A" : this.getTestResult().getCustomer().getUserId());
+        writer.println(this.getTestResult() == null ? "N/A" : String.valueOf(this.getTestResult().getCustomer().getUserId()));
 
         writer.println("");
         writer.println("        </td>");
@@ -110,31 +110,29 @@ public class TestResultView extends HtmlView {
         writer.println("        </td>");
         writer.println("");
         writer.println("        <td width=49%>");
-//        writer.println("            3");
         writer.println(this.getTestResult() == null ? "N/A" : this.getTestResult().getScore());
         writer.println("        </td>");
         writer.println("    </tr>");
+
         writer.println("    <tr>");
         writer.println("        <td width=50%>");
         writer.println("            考试开始时间");
         writer.println("        </td>");
-//        writer.println("");
-        writer.println(this.getTestResult() == null ? "N/A" : this.getTestResult().getStartTime());
-
         writer.println("        <td width=49%>");
-        writer.println("");
+        writer.println(this.getTestResult() == null ? "N/A" : this.getTestResult().getStartTime());
         writer.println("        </td>");
         writer.println("    </tr>");
+
         writer.println("    <tr>");
         writer.println("        <td width=50%>");
         writer.println("            考试结束时间");
         writer.println("        </td>");
-        writer.println("        <td width=49%>");
-//        writer.println("            ");
-        writer.println(this.getTestResult() == null ? "N/A" : this.getTestResult().getEndTime());
 
+        writer.println("        <td width=49%>");
+        writer.println(this.getTestResult() == null ? "N/A" : this.getTestResult().getEndTime());
         writer.println("        </td>");
         writer.println("    </tr>");
+
         writer.println("</table>");
         writer.println("");
         writer.println("");
@@ -170,7 +168,7 @@ public class TestResultView extends HtmlView {
         outputResult(writer);
 
         writer.println("<div align=\"center\">");
-        writer.println("    <a href=\"testcenter.html\">");
+        writer.println("    <a href=\"testCenterView\">");
         writer.println("        返回");
         writer.println("    </a>");
         writer.println("</div>");

@@ -173,8 +173,7 @@ public class TestCenterView extends HtmlView {
         if (this.getTestResultList() != null && this.getTestResultList().size() > 0) {
             DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM, this.getLocale());
             for (TestResult testResult : this.getTestResultList()) {
-                String url = this.getUrlTestResult().replace("{testResultId}",
-                        String.valueOf(testResult.getId()));
+                String url = this.getUrlTestResult().replace("{testResultId}",String.valueOf(testResult.getId()));
                 writer.println("              <tr>");
                 writer.println("                <td width=\"33%\">");
                 writer.println(dateFormat.format(testResult.getStartTime()));

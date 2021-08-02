@@ -212,7 +212,7 @@ public class LoginView extends HtmlView {
       writer.println("    <div class=\"container\" style=\"background-color:#f1f1f1\">");
       writer.println("        <button class=\"cancelbtn\" type=\"button\">取消");
       writer.println("        </button>");
-      writer.println("        <span class=\"psw\"><a href=\"loginView.jsp\">忘记密码?</a></span>");
+      writer.println("        <span class=\"psw\"><a href=\"login.html\">忘记密码?</a></span>");
       writer.println("    </div>");
       writer.println("</form>");
       writer.println("");

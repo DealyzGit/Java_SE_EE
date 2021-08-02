@@ -62,7 +62,7 @@ public class WelcomeView extends HtmlView {
         writer.println("<div style=\"background-color: rgb(255,255,204); width: 100%; height: 30%;\">");
         writer.println("    <div style=\"text-align:center;\">");
 
-//        writer.println("        <a href=\"loginView.jsp\">进入fangsoft考试中心原型</a>");
+//        writer.println("        <a href=\"login.html\">进入fangsoft考试中心原型</a>");
 //      writer.println( "<a href=\""+this.getUrlNextPage()+"\">进入fangsoft考试中心原型</a>");
         writer.println(this.makeLink(this.getUrlNextPage(), "进入fangsoft考试中心原型"));
         writer.println("    </div>");

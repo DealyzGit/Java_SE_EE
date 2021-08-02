@@ -14,30 +14,39 @@ import org.fangsoft.util.DataConverter;
 import org.fangsoft.view.StartTestView;
 
 import java.io.IOException;
-import java.util.Date;
 
-@WebServlet(name = "StartTestServlet", value = "/startTest.jsp")
+@WebServlet(name = "StartTestServlet", value = "/startTest")
 public class StartTestServlet extends TestCenterServlet implements Servlet {
 
     protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        if (!this.isLogined(request, response)) {
+            this.processNotLogin(request, response);
+            return;//必须在此return，已在processNotLogin中重定向请求
+        }
         HttpSession session = request.getSession(false);
         TestResult testResult = null;
 
-        session.setMaxInactiveInterval(this.getTestCenterFacade().getRemainingTestTime(testResult) + 30);
-
         if (session.getAttribute(Constants.SESSION_TESTRESULT) != null) {
             testResult = (TestResult) session.getAttribute(Constants.SESSION_TESTRESULT);
+
+            session.setMaxInactiveInterval(this.getTestCenterFacade().getRemainingTestTime(testResult) + 3000);
+
+            int testId = DataConverter.str2Int(request.getParameter("testId"));
+            int testReservationId = DataConverter.str2Int(request.getParameter("testReservationId"));
+            testResult = this.getTestCenterFacade().startTest(testId, testReservationId, testResult.getCustomer());
+
+            session.setAttribute(Constants.SESSION_TESTRESULT, testResult);
+            session.setAttribute(Constants.SESSION_TEST_RESERVATION, testReservationId);
+
         } else {
             int testId = DataConverter.str2Int(request.getParameter("testId"));
             int testReservationId = DataConverter.str2Int(request.getParameter("testReservationId"));
             testResult = this.getTestCenterFacade().startTest(testId, testReservationId, this.getCustomer(request));
+
+            testResult = this.getTestCenterFacade().startTest(testId, testReservationId, testResult.getCustomer());
+
             session.setAttribute(Constants.SESSION_TESTRESULT, testResult);
             session.setAttribute(Constants.SESSION_TEST_RESERVATION, testReservationId);
-            Date date = new Date();
-
-            testResult.setStartTime(date);
-            this.getTestCenterFacade().startTest(testId, testReservationId, testResult.getCustomer());
         }
         displayView(request, response, testResult.getTest());
     }

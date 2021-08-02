@@ -27,46 +27,33 @@ public class LoginServlet extends TestCenterServlet {
         view.display(response);
     }
 
-//    protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String userId=DataValidator.validate(request.getParameter("userId"));
-//        String password=DataValidator.validate(request.getParameter("password"));
-//        Customer customer=this.getTestCenterFacade().login(userId,password);
-//        if(customer!=null){
-//            HttpSession session=request.getSession();
-//            session.setAttribute(Constants.SESSION_USERID, customer);
-//            request.getRequestDispatcher("/"+URLConfig.urlTestCenterView).forward(request, response);
-//            return;
-//        }else{
-//            this.displayView(response,"","invalid userId or password");
-//        }
-//    }
 
     protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         String userId=DataValidator.validate(request.getParameter("userId"));
         String password=DataValidator.validate(request.getParameter("password"));
+
         if(request.getParameter("save")!=null){//选中已保存
             this.saveCookie(response, userId);
         }else{//未选中保存
-            CookieUtil.killCookie(request, response,
-                    Constants.COOKIE_USERID);
+            CookieUtil.killCookie(request, response,Constants.COOKIE_USERID);
         }
         Customer customer=this.getTestCenterFacade().login(userId,password);
+
         if(customer!=null){//登录成功
             HttpSession session=request.getSession();
             session.setAttribute(Constants.SESSION_USERID, customer);
-            request.getRequestDispatcher("/"+URLConfig.urlTestCenterView).
-                    forward(request, response);
+            request.getRequestDispatcher("/"+URLConfig.urlTestCenterView).forward(request, response);
             return;
         }else{//登录不成功
-            String cookieUserId= CookieUtil.getCookieValue(
-                    request,Constants.COOKIE_USERID);
-            this.displayView(response,cookieUserId,//返回登录页面
-                    "invalid userId or password");
+            String cookieUserId= CookieUtil.getCookieValue(request,Constants.COOKIE_USERID);
+            this.displayView(response,cookieUserId,"invalid userId or password");
         }
     }
+
     private void saveCookie(HttpServletResponse response,final String cookieValue){
         Cookie cookie=new Cookie(Constants.COOKIE_USERID,cookieValue);
-        cookie.setMaxAge(31536000);//Cookie保存期限为一年
+        cookie.setMaxAge(31536);//Cookie保存期限为一年
         response.addCookie(cookie);
     }
 

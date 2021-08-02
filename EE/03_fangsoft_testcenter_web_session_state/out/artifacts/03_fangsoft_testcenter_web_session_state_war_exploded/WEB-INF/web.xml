@@ -17,5 +17,8 @@
         <welcome-file>welcomeView</welcome-file>
     </welcome-file-list>
 
+    <listener>
+        <listener-class>org.fangsoft.testcenter.web.TestTimeoutGuard</listener-class>
+    </listener>
 
 </web-app>

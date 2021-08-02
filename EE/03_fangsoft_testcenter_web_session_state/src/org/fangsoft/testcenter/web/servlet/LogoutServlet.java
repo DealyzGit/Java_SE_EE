@@ -26,27 +26,22 @@ public class LogoutServlet extends TestCenterServlet {
 
     protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        protected void doProcess(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-            HttpSession session=request.getSession(false);
-            if(session!=null){
-                if(session.getAttribute(Constants.SESSION_TESTRESULT)!=null){
-                    TestResult testResult=(TestResult)session.
-                            getAttribute(Constants.SESSION_TESTRESULT);
-                    int testReservationId=(Integer)session.
-                            getAttribute(Constants.SESSION_TEST_RESERVATION);
-                    this.getTestCenterFacade().
-                            commitTest(testResult, testReservationId);
-                }
-                session.invalidate();
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            if (session.getAttribute(Constants.SESSION_TESTRESULT) != null) {
+                TestResult testResult = (TestResult) session.getAttribute(Constants.SESSION_TESTRESULT);
+                int testReservationId = (Integer) session.getAttribute(Constants.SESSION_TEST_RESERVATION);
+                this.getTestCenterFacade().commitTest(testResult, testReservationId);
             }
-            response.sendRedirect(URLConfig.urlLoginView);
+            session.invalidate();
         }
+        response.sendRedirect(URLConfig.urlLoginView);
+
 
         String userId = DataValidator.validate(request.getParameter("userId"));
         String password = DataValidator.validate(request.getParameter("password"));
         Customer customer = this.getTestCenterFacade().login(userId, password);
         if (customer != null) {
-            HttpSession session = request.getSession();
             session.setAttribute(Constants.SESSION_USERID, customer);
             request.getRequestDispatcher("/" + URLConfig.urlTestCenterView).forward(request, response);
             return;

@@ -17,6 +17,10 @@ public class DisplayTestResultViewServlet extends TestCenterServlet {
 
 
     protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (!this.isLogined(request, response)) {
+            this.processNotLogin(request, response);
+            return;//必须在此return，已在processNotLogin中重定向请求
+        }
 
         HttpSession session = request.getSession(false);
         TestResult testResult = null;
@@ -31,8 +35,6 @@ public class DisplayTestResultViewServlet extends TestCenterServlet {
         if (session.getAttribute(Constants.SESSION_TEST_RESERVATION) != null) {
             trId = (int) session.getAttribute(Constants.SESSION_TEST_RESERVATION);
         }
-
-        this.getTestCenterFacade().commitTest(testResult, trId);
 
         TestResultView testResultView = new TestResultView();
         testResultView.setTestResult(testResult);
