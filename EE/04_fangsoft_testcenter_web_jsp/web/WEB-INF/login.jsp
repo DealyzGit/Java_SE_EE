@@ -17,6 +17,7 @@
 <%@ page import="jakarta.servlet.http.HttpSession" %>
 <%@ page import="jakarta.servlet.http.HttpServletResponse" %>
 <%@ page import="jakarta.servlet.http.Cookie" %>
+
 <%
     response.reset();//清空输出提交前的所有输出内容
     String userId = DataValidator.validate(request.getParameter("userId"));
