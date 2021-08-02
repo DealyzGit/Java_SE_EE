@@ -31,11 +31,5 @@
         <url-pattern>/allTest</url-pattern>
     </servlet-mapping>
 
-<!--    <servlet>-->
-<!--        <servlet-name>login</servlet-name>-->
-<!--        <jsp-file>login.jsp</jsp-file>-->
-<!--    </servlet>-->
-
-
 
 </web-app>
