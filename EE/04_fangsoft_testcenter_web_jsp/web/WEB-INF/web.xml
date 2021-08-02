@@ -4,23 +4,14 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-    <servlet>
-        <servlet-name>DisplayWelcomeViewServlet</servlet-name>
-        <servlet-class>org.fangsoft.testcenter.web.servlet.DisplayWelcomeViewServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DisplayWelcomeViewServlet</servlet-name>
-        <url-pattern>/welcomeView</url-pattern>
-    </servlet-mapping>
+    <listener>
+        <listener-class>org.fangsoft.testcenter.web.TestTimeoutGuard</listener-class>
+    </listener>
+
 
     <welcome-file-list>
         <welcome-file>welcomeView.jsp</welcome-file>
     </welcome-file-list>
-
-
-    <listener>
-        <listener-class>org.fangsoft.testcenter.web.TestTimeoutGuard</listener-class>
-    </listener>
 
     <servlet>
         <servlet-name>allTest</servlet-name>
