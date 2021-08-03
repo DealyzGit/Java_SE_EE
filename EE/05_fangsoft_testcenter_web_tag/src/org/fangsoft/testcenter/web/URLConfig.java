@@ -10,7 +10,9 @@ public class URLConfig {
     public static final String urlTestResult = "testResultView?testResultId={testResultId}";
     public static final String urlStartTest = "startTest?testId={testId}&testReservationId={testReservationId}";
     public static final String urlPayAction = "pay";
+    public static final String urlPay = "pay?testReservationId={testReservationId}";
     public static final String urlPayment = "paymentView?testReservationId={testReservationId}";
     public static final String urlCommitTestAction = "commitTest";
     public static final String urlTestReservation = "reserveTest?testId={testId}";
+    public static final String urlStartTestView="";
 }

@@ -17,6 +17,7 @@
 <%@ page import="jakarta.servlet.http.HttpSession" %>
 <%@ page import="jakarta.servlet.http.HttpServletResponse" %>
 <%@ page import="jakarta.servlet.http.Cookie" %>
+
 <%
     response.reset();//清空输出提交前的所有输出内容
     String userId = DataValidator.validate(request.getParameter("userId"));
@@ -30,14 +31,11 @@
     if (customer != null) {
         HttpSession session = request.getSession();
         session.setAttribute(Constants.SESSION_USERID, customer);
-        request.getRequestDispatcher("/" + URLConfig.urlTestCenterView).
-                forward(request, response);
+        request.getRequestDispatcher("/" + URLConfig.urlTestCenterView).forward(request, response);
         return;
     } else {
-        request.setAttribute(Constants.REQUEST_LOGIN_ERROR_MSG,
-                "invalid userId or password");
-        request.getRequestDispatcher("/" + URLConfig.urlLoginView).
-                forward(request, response);
+        request.setAttribute(Constants.REQUEST_LOGIN_ERROR_MSG,"invalid userId or password");
+        request.getRequestDispatcher("/" + URLConfig.urlLoginView).forward(request, response);
     }
 %>
 <%!

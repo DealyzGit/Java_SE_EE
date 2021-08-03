@@ -57,14 +57,14 @@ public class CommitTestServlet extends TestCenterServlet {
         Iterator it1 = strings.iterator();
         List<String> oldAnswer = new ArrayList<>(testResult.getTest().getNumQuestion());
 
-        String[] old_answer = {"","",""};
+        String[] old_answer = {"", "", ""};
         while (it1.hasNext()) {
             String ts = (String) it1.next();
             if (ts.split("_").length != 1) {
                 int oder = Integer.parseInt(ts.split("_")[0]);
                 for (QuestionResult qr : testResult.getQuestionResult()) {
                     if (qr.getQuestion().getId() == oder) {
-                        old_answer[oder]+=ts.split("_")[1];
+                        old_answer[oder] += ts.split("_")[1];
                         qr.setAnswer(old_answer[oder]);
                     }
                 }
