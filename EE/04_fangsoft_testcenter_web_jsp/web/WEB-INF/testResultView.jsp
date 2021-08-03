@@ -25,7 +25,7 @@
 //        trId = (int) session.getAttribute(Constants.SESSION_TEST_RESERVATION);
 //    }
     int testResultId= Integer.parseInt(request.getParameter("testResultId"));
-    testResult=JSPUtil.getTestCenterFacade().getDaoFactory().getTestResultDao().findTestResultByPK(testResultId;
+    testResult=JSPUtil.getTestCenterFacade().getDaoFactory().getTestResultDao().findTestResultByPK(testResultId);
 %>
 
 <html>

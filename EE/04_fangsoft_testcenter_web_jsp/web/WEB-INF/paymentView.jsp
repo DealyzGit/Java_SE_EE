@@ -35,11 +35,12 @@ int testReservationId = Integer.parseInt(request.getParameter("testReservationId
             <form>
                 <div align="center">
                     <label >金额：</label>
-                    <input type="text" name="username" value="">
+                    <input type="text" name="username" value="100">
                 </div>
                 <div align="center">
                     <label >账号：</label>
-                    <input type="text" name="password">
+
+                    <input type="text" name="userId" value="tong">
                 </div>
                 <div align="center">银行
                     <input type="checkbox" name="vehicle" value="Bike" checked="on">邮储银行
