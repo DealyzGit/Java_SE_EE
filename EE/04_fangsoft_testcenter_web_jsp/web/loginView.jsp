@@ -169,7 +169,7 @@
         <label><b>密码：</b></label>
         <input name="psw" placeholder="输入密码" required type="password">
 
-        <a href="testcenter.jsp">
+        <a href="WEB-INF/testcenter.jsp">
             <button type="submit">登录</button>
         </a>
 
