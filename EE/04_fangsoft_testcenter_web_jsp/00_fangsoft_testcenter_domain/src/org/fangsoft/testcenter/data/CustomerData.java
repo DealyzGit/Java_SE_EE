@@ -16,7 +16,7 @@ public class CustomerData {
             },
             {
                     "tong",
-                    "123",
+                    "tong",
                     "tong@gmail.com"
 
             }

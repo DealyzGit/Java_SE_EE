@@ -1,12 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 24818
-  Date: 2021/8/2
-  Time: 11:05
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page session="false" pageEncoding="utf-8" %>
+<%@ page session="false" pageEncoding="UTF-8" %>
 <%@ page import="org.fangsoft.testcenter.web.Constants,
                  org.fangsoft.testcenter.web.JSPUtil,
                  org.fangsoft.util.DataConverter,
@@ -17,31 +10,33 @@
 <%@ page import="java.util.List" %>
 <%
     response.reset();
-    if (!JSPUtil.processNotLogin(request, response)) return;
+//    if (!JSPUtil.processNotLogin(request, response))
+//        return;
     HttpSession session = request.getSession(false);
     TestResult testResult;
+    int testReservationId = -1;
     if (session.getAttribute(Constants.SESSION_TESTRESULT) != null) {
-        testResult = (TestResult) session.
-                getAttribute(Constants.SESSION_TESTRESULT);
+        testResult = (TestResult) session.getAttribute(Constants.SESSION_TESTRESULT);
+
     } else {
         int testId = DataConverter.str2Int(request.getParameter("testId"));
-        int testReservationId = DataConverter.str2Int(request.getParameter("testReservationId"));
+        testReservationId = DataConverter.str2Int(request.getParameter("testReservationId"));
         testResult = JSPUtil.getTestCenterFacade().startTest(testId, testReservationId, JSPUtil.getCustomer(request));
-        session.setAttribute(Constants.SESSION_TESTRESULT, testResult);
-        session.setAttribute(Constants.SESSION_TEST_RESERVATION, testReservationId);
     }
+    session.setAttribute(Constants.SESSION_TESTRESULT, testResult);
+    session.setAttribute(Constants.SESSION_TEST_RESERVATION, testReservationId);
+
     session.setMaxInactiveInterval(JSPUtil.getTestCenterFacade().getRemainingTestTime(testResult) + 30);
-    request.getRequestDispatcher("/" + URLConfig.urlStartTestView).forward(request, response);
-
+//    request.getRequestDispatcher("/" + URLConfig.urlStartTestView).forward(request, response);
 %>
-<meta charset="UTF-8">
 
+<html>
 <head>
-
+    <meta charset="UTF-8">
     <title>FangSoft</title>
 </head>
 
-<div align="center" style="background-color: rgb(255,255,204); width: 100%; height: 10%;">
+<div align="center" style="background-color: rgb(255,255,204); width: 100%; height: 15%;">
     <span style="font-size: medium; color: BLUE; ">
         <h1>Fangsoft考试中心</h1>
     </span>
@@ -55,7 +50,7 @@
     </tr>
 </table>
 
-<jsp:include page="testInfo.jspf"/>
+<jsp:include page="/WEB-INF/testInfo.jsp"/>
 
 
 <table width="100%" border="0">
@@ -81,13 +76,14 @@
                 </div>
             </td>
         </tr>
-            <%
-            Test test=testResult.getTest();
-            if(test!=null && test.getQuestion()!=null){
+        <%
+            Test test = testResult.getTest();
+            if (test != null && test.getQuestion() != null) {
                 List<Question> questionList = test.getQuestion();
-                for (int i=0;i<questionList.size();++i){
+                for (int i = 0; i < questionList.size(); ++i) {
                     Question q = questionList.get(i);
-            %>
+        %>
+
         <tr>
             <td width="6%">
                 <%=i + 1%>
@@ -96,38 +92,45 @@
                 <%=q.getName()%>
             </td>
         </tr>
-            <%
-            List<ChoiceItem> items = q.getChoiceItem();
-            if (items != null) {
-                    for (ChoiceItem item : items) {
-                        String id = q.getId() + "_" + item.getId();
-            %>
+
         <tr>
             <td>
             </td>
             <td>
                 <ol>
+                    <%
+                        List<ChoiceItem> items = q.getChoiceItem();
+                        if (items != null) {
+                            for (ChoiceItem item : items) {
+                                String id = q.getId() + "_" + item.getId();
+                    %>
                     <li>
-                        <input type="checkbox" name="<%=q.getId()%>>" id="<%=item.getId()%>>">
+                        <input type="checkbox" name="<%=id%>" id="<%=id%>">
                         <%=item.getName()%>
                     </li>
+
+                    <%
+                        }
+                    %>
+
                 </ol>
             </td>
         </tr>
 
-            <%
-                        }
+        <%
+
                     }
                 }
             }
-            %>
-                <tr>
-                    <td colspan="2">
-                        <div align="center">
-                            <a href="<%=URLConfig.urlTestResult%>>" class="button">完成考试</a>
-                        </div>
-                    </td>
-                </tr>
+        %>
+        <tr>
+            <td colspan="2">
+                <div align="center">
+                    <input type="submit" name="button" id="button" value="完成考试"/>
+                </div>
+            </td>
+        </tr>
 
-            </table>
-        </form>
+    </table>
+</form>
+</html>

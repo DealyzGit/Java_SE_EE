@@ -1,4 +1,4 @@
-<%--
+<%@ page import="org.fangsoft.testcenter.web.URLConfig" %><%--
   Created by IntelliJ IDEA.
   User: 24818
   Date: 2021/8/3
@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+int testReservationId = Integer.parseInt(request.getParameter("testReservationId"));
+
+%>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -38,13 +42,16 @@
                     <input type="text" name="password">
                 </div>
                 <div align="center">银行
-                    <input type="checkbox" name="vehicle" value="Bike">邮储银行
+                    <input type="checkbox" name="vehicle" value="Bike" checked="on">邮储银行
                     <input type="checkbox" name="vehicle" value="Bike">邮惠万家银行<br>
                 </div>
 
                 <div align="center">
-                    <a href="paymentReport.jsp" class="button">支付</a>
-                    <a href="testcenter.jsp" class="button">放弃</a>
+                    <%
+                    String url = URLConfig.urlPay.replace("{testReservationId}",String.valueOf(testReservationId));
+                    %>
+                    <a href="<%=url%>" class="button">支付</a>
+                    <a href="testCenterView" class="button">放弃</a>
                 </div>
 
                 <style type="text/css">

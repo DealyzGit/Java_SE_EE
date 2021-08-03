@@ -1,4 +1,5 @@
-<%--
+<%@ page import="org.fangsoft.testcenter.model.TestReservation" %>
+<%@ page import="org.fangsoft.testcenter.web.JSPUtil" %><%--
   Created by IntelliJ IDEA.
   User: 24818
   Date: 2021/8/3
@@ -6,6 +7,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    try {
+        int testReservationId = Integer.parseInt(request.getParameter("testReservationId"));
+        JSPUtil.getTestCenterFacade().getDaoFactory().getTestReservationDao().updateStatus(testReservationId, TestReservation.Status.PAYED);
+    }catch (Exception e){
+        e.printStackTrace();
+    }
+%>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -29,7 +38,7 @@
         支付成功
     </tr>
     <tr>
-        <a href="testcenter.jsp">
+        <a href="testCenterView">
             返回
         </a>
     </tr>

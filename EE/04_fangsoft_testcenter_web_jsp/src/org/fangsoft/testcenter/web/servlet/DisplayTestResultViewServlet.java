@@ -29,9 +29,6 @@ public class DisplayTestResultViewServlet extends TestCenterServlet {
         if (session.getAttribute(Constants.SESSION_TESTRESULT) != null) {
             testResult = (TestResult) session.getAttribute(Constants.SESSION_TESTRESULT);
         }
-//        if (session.getAttribute(Constants.SESSION_USERID) != null) {
-//            customer = (Customer) session.getAttribute(Constants.SESSION_USERID);
-//        }
         if (session.getAttribute(Constants.SESSION_TEST_RESERVATION) != null) {
             trId = (int) session.getAttribute(Constants.SESSION_TEST_RESERVATION);
         }

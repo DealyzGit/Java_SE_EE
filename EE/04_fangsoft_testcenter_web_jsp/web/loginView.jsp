@@ -167,9 +167,9 @@
         <input name="userId" type="text" id="userId" value="<%=userId %>" size="40"/>
 
         <label><b>密码：</b></label>
-        <input name="psw" placeholder="输入密码" required type="password">
+        <input name="password" placeholder="输入密码" required type="password">
 
-        <a href="WEB-INF/testcenter.jsp">
+        <a href="WEB-INF/login.jsp">
             <button type="submit">登录</button>
         </a>
 

@@ -6,18 +6,47 @@
                  java.text.DateFormat,
                  java.util.List"
 %>
+<%@ page import="java.util.Date" %>
+<%@ page import="org.fangsoft.testcenter.model.Test" %>
+<%@ page import="org.fangsoft.testcenter.model.Customer" %>
 
 <%
     if (!JSPUtil.processNotLogin(request, response)) return;//未登录不能访问
+
     String userId = JSPUtil.getCustomer(request).getUserId();
+
+    try {
+        response.setContentType("text/html;charset=UTF-8");
+        String test_Id = request.getParameter("testId");
+        if (test_Id != null) {
+            int testId = Integer.parseInt(test_Id);
+            Date date = new Date();
+            Test testById = JSPUtil.getTestCenterFacade().findTestByPK(testId);
+            Customer customer = JSPUtil.getCustomer(request);
+            TestReservation testReservation = new TestReservation();
+            testReservation.setStatus(TestReservation.Status.ORDERED);
+            testReservation.setOrderDate(date);
+            testReservation.setTest(testById);
+            testReservation.setCustomer(customer);
+            JSPUtil.getTestCenterFacade().getDaoFactory().getTestReservationDao().save(testReservation);
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+
     List<TestReservation> testReservationList = JSPUtil.getTestCenterFacade().findActiveTestReservationByUserId(userId);//考试预订记录
     List<TestResult> testResultList = JSPUtil.getTestCenterFacade().findTestResultByUserId(userId);//考试结果历史记录
+
+
     String urlLogout = URLConfig.urlLogout;//
     String urlStartTest = URLConfig.urlStartTest;
     String urlTestResult = URLConfig.urlTestResult;
     String urlPayment = URLConfig.urlPayment;
-    DateFormat dateFormat = DateFormat.getDateInstance
-            (DateFormat.MEDIUM, request.getLocale());//日期显示格式
+
+    DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM, request.getLocale());//日期显示格式
+
+
 %>
 
 
@@ -44,7 +73,7 @@
 </p>
 
 
-<jsp:include page="allTest"/>
+<jsp:include page="/WEB-INF/allTest.jsp"/>
 
 <table width="100%" border="0">
     <tr>
@@ -65,19 +94,16 @@
                 if (testReservation.getStatus() ==
                         TestReservation.Status.PAYED) {
                     href = urlStartTest.replace("{testId}", testId);
-                    href = href.replace("{testReservationId}",
-                            testReservationId);
+                    href = href.replace("{testReservationId}",testReservationId);
                     hrefText = "开始考试";
                 } else if (testReservation.getStatus() ==
                         TestReservation.Status.FULFILLING) {
                     href = urlStartTest.replace("{testId}", testId);
-                    href = href.replace("{testReservationId}",
-                            testReservationId);
+                    href = href.replace("{testReservationId}",testReservationId);
                     hrefText = "继续考试";
                 } else if (testReservation.getStatus() ==
                         TestReservation.Status.ORDERED) {
-                    href = urlPayment.replace("{testReservationId}",
-                            testReservationId);
+                    href = urlPayment.replace("{testReservationId}",testReservationId);
                     hrefText = "支付";
                 }
     %>
@@ -121,19 +147,16 @@
     <%
         if (testResultList != null && testResultList.size() > 0) {
             for (TestResult testResult : testResultList) {
-                String href = urlTestResult.replace("{testResultId}",
-                        String.valueOf(testResult.getId()));
+                String href = urlTestResult.replace("{testResultId}",String.valueOf(testResult.getId()));
     %>
     <tr>
         <td width="33%">
             <%=dateFormat.format(testResult.getStartTime()) %>
         </td>
         <td width="31%">
-            <%=JSPUtil.makeLink(href,
-                    testResult.getTest().getName()) %>
+            <%=JSPUtil.makeLink(href,testResult.getTest().getName()) %>
         </td>
-        <td width="36%">
-            <%=testResult.getResult().getValue() %>
+        <td width="36%"> <%=testResult.getResult().getValue() %>
         </td>
     </tr>
     <%

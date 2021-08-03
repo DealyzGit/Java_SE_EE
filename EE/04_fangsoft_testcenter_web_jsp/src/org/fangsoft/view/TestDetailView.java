@@ -117,7 +117,6 @@ public class TestDetailView extends HtmlView {
 //        writer.println("        <a href=\"testCenterView\">");
         String urlpage="testCenterView?testId={testId}".replace("{testId}",String.valueOf(this.getTest().getId()));
         writer.println("        <a href=\""+   urlpage  +"\">");
-
         writer.println("            预定考试");
         writer.println("        </a>");
         writer.println("        </td>");

@@ -1,20 +1,12 @@
-<%@ page import="org.fangsoft.testcenter.web.URLConfig" %>
+<%@ page pageEncoding="UTF-8" %>
 <%@ page import="org.fangsoft.testcenter.web.JSPUtil" %>
 <%@ page import="org.fangsoft.testcenter.model.Test" %>
-<%@ page import="java.util.List" %>
-<%@ page import="org.fangsoft.testcenter.web.Constants" %><%--
-  Created by IntelliJ IDEA.
-  User: 24818
-  Date: 2021/8/2
-  Time: 10:56
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"  %>
 <%
-    int testid=-1;
-    Test test= JSPUtil.getTestCenterFacade().findTestByPK(testid);
-    String urlTestDetail= URLConfig.urlTestDetail;
+    int testId= Integer.parseInt(request.getParameter("testId"));
+    Test test =JSPUtil.getTestCenterFacade().findTestByPK(testId);
 %>
+
 
 <table width="69%" border="0" align="right">
     <tr>
@@ -68,12 +60,5 @@
             <%=test.getDescription()%>
         </td>
     </tr>
-    <tr>
-        <td align="center" width=49%>
-            <%=JSPUtil.makeLink(URLConfig.urlPayment %>
-            <a href="payment.html">
-                预定考试
-            </a>
-        </td>
-    </tr>
+
 </table>

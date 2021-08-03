@@ -1,6 +1,9 @@
 <%@ page import="org.fangsoft.testcenter.web.JSPUtil" %>
 <%@ page import="org.fangsoft.testcenter.web.URLConfig" %>
-<%@ page import="org.fangsoft.testcenter.model.Test" %><%--
+<%@ page import="org.fangsoft.testcenter.model.Test" %>
+<%@ page import="org.fangsoft.testcenter.model.TestResult" %>
+<%@ page pageEncoding="UTF-8" %>
+<%--
   Created by IntelliJ IDEA.
   User: 24818
   Date: 2021/8/2
@@ -24,11 +27,14 @@
 </div>
 
 <%
-    int testId = 0;
+
     if (!JSPUtil.processNotLogin(request, response)) return;//未登录不能访问
     String userId = JSPUtil.getCustomer(request).getUserId();
     String urlLogout = URLConfig.urlLogout;
+    int testId= Integer.parseInt(request.getParameter("testId"));
     Test test =JSPUtil.getTestCenterFacade().findTestByPK(testId);
+
+
 %>
 <p>
     <%=userId%>
@@ -47,7 +53,7 @@
             <div align="left">
                 <ul>
                     <li>
-                            java
+                            <%=test.getName()%>
                     </li>
                 </ul>
             </div>
@@ -63,7 +69,18 @@
     </tr>
 </table>
 
-<jsp:include page="testInfo.jspf"/>
+<jsp:include page="/WEB-INF/testInfo.jsp"/>
 
+<table width="69%" border="0" align="right">
+<tr>
+    <td align="center" width=49%>
+        <%
+            String urlpage="testCenterView?testId={testId}".replace("{testId}",String.valueOf(test.getId()));
+        %>
+        <%=JSPUtil.makeLink(urlpage,"预定考试")%>
+        </a>
+    </td>
+</tr>
+</table>
 </body>
 </html>

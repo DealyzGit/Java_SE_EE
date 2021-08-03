@@ -1,11 +1,32 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 24818
-  Date: 2021/8/3
-  Time: 10:26
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="org.fangsoft.testcenter.web.JSPUtil" %>
+<%@ page import="org.fangsoft.testcenter.model.TestResult" %>
+<%@ page import="org.fangsoft.testcenter.model.Customer" %>
+<%@ page import="org.fangsoft.testcenter.web.Constants" %>
+<%@ page import="org.fangsoft.testcenter.model.Question" %>
+<%@ page import="org.fangsoft.testcenter.config.Configuration" %>
+<%@ page import="java.util.*" %>
+<%@ page import="org.fangsoft.testcenter.model.QuestionResult" %>
+<%@ page import="jakarta.servlet.http.HttpSession" %>
+<%@ page import="org.fangsoft.testcenter.web.URLConfig" %>
+<%@ page pageEncoding="UTF-8" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
+<%
+
+    TestResult testResult = null;
+//    HttpSession session = request.getSession(false);
+//    int trId = -1;
+//    Customer customer = null;
+//    if (session.getAttribute(Constants.SESSION_TESTRESULT) != null) {
+//        testResult = (TestResult) session.getAttribute(Constants.SESSION_TESTRESULT);
+//    }
+//    if (session.getAttribute(Constants.SESSION_TEST_RESERVATION) != null) {
+//        trId = (int) session.getAttribute(Constants.SESSION_TEST_RESERVATION);
+//    }
+    int testResultId= Integer.parseInt(request.getParameter("testResultId"));
+    testResult=JSPUtil.getTestCenterFacade().getDaoFactory().getTestResultDao().findTestResultByPK(testResultId;
+%>
 
 <html>
 <head>
@@ -19,6 +40,7 @@
         <h1>Fangsoft考试中心</h1>
     </span>
 </div>
+
 <table width="99%" border="0">
     <tr>
         <td bgcolor="#FFFFCC">
@@ -34,7 +56,7 @@
         </td>
 
         <td width=49%>
-            tong
+            <%=testResult.getCustomer().getUserId()%>
         </td>
     </tr>
     <tr>
@@ -43,7 +65,7 @@
         </td>
 
         <td width=49%>
-            Y/N
+            <%=testResult.getResult()%>
         </td>
     </tr>
 
@@ -53,7 +75,7 @@
         </td>
 
         <td width=49%>
-            3
+            <%=testResult.getScore()%>
         </td>
     </tr>
     <tr>
@@ -62,7 +84,7 @@
         </td>
 
         <td width=49%>
-
+            <%=testResult.getStartTime()%>
         </td>
     </tr>
     <tr>
@@ -70,9 +92,10 @@
             考试结束时间
         </td>
         <td width=49%>
-            tong
+            <%=testResult.getEndTime()%>
         </td>
     </tr>
+
 </table>
 
 
@@ -101,8 +124,35 @@
         </td>
     </tr>
 </table>
+
+
+<table width="99%" border="0">
+    <% for (int i = 0; i < testResult.getTest().getNumQuestion(); i++) { %>
+
+    <tr>
+        <td width=25%>
+            <%=i%>
+        </td>
+        <td width=25%>
+            <%=testResult.getQuestionResult(i).getAnswer()%>
+        </td>
+
+        <td width=25%>
+            <%=testResult.getTest().getQuestion().get(i).getAnswer()%>
+        </td>
+
+        <td width=24%>
+                <%=testResult.getQuestionResult(i).isResult()?"right":"wrong"%>
+    </tr>
+
+    <%
+        }
+    %>
+</table>
+
+
 <div align="center">
-    <a href="testcenter.html">
+    <a href="<%=URLConfig.urlTestCenterView%>">
         返回
     </a>
 </div>
