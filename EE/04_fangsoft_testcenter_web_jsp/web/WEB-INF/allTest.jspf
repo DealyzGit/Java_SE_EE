@@ -11,10 +11,12 @@
 				 org.fangsoft.testcenter.web.URLConfig,
 				 java.util.List"
 %>
+
 <%
     List<Test> testList=JSPUtil.getTestCenterFacade().findAllTest();
     String urlTestDetail=URLConfig.urlTestDetail;
 %>
+
 <table width="99%" border="0">
     <tr>
         <td bgcolor="#FFFFCC"><strong>考试</strong></td>

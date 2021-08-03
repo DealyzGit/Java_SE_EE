@@ -7,14 +7,11 @@
                  java.util.List"
 %>
 
-
 <%
     if (!JSPUtil.processNotLogin(request, response)) return;//未登录不能访问
     String userId = JSPUtil.getCustomer(request).getUserId();
-    List<TestReservation> testReservationList = JSPUtil.getTestCenterFacade().
-            findActiveTestReservationByUserId(userId);//考试预订记录
-    List<TestResult> testResultList = JSPUtil.getTestCenterFacade().
-            findTestResultByUserId(userId);//考试结果历史记录
+    List<TestReservation> testReservationList = JSPUtil.getTestCenterFacade().findActiveTestReservationByUserId(userId);//考试预订记录
+    List<TestResult> testResultList = JSPUtil.getTestCenterFacade().findTestResultByUserId(userId);//考试结果历史记录
     String urlLogout = URLConfig.urlLogout;//
     String urlStartTest = URLConfig.urlStartTest;
     String urlTestResult = URLConfig.urlTestResult;
@@ -56,33 +53,32 @@
         </td>
     </tr>
     <%
-        if(testReservationList!=null &&testReservationList.size()>0){
-            for(TestReservation testReservation:testReservationList){
-                if(testReservation.getStatus()==
-                        TestReservation.Status.FULFILLED)continue;
-                String href="";
-                String hrefText="";
-                String testReservationId=
+        if (testReservationList != null && testReservationList.size() > 0) {
+            for (TestReservation testReservation : testReservationList) {
+                if (testReservation.getStatus() ==TestReservation.Status.FULFILLED) continue;
+                String href = "";
+                String hrefText = "";
+                String testReservationId =
                         String.valueOf(testReservation.getId());
-                String testId=
+                String testId =
                         String.valueOf(testReservation.getTest().getId());
-                if(testReservation.getStatus()==
-                        TestReservation.Status.PAYED){
-                    href=urlStartTest.replace("{testId}", testId);
-                    href=href.replace("{testReservationId}",
+                if (testReservation.getStatus() ==
+                        TestReservation.Status.PAYED) {
+                    href = urlStartTest.replace("{testId}", testId);
+                    href = href.replace("{testReservationId}",
                             testReservationId);
-                    hrefText="开始考试";
-                }else if(testReservation.getStatus()==
-                        TestReservation.Status.FULFILLING){
-                    href=urlStartTest.replace("{testId}", testId);
-                    href=href.replace("{testReservationId}",
+                    hrefText = "开始考试";
+                } else if (testReservation.getStatus() ==
+                        TestReservation.Status.FULFILLING) {
+                    href = urlStartTest.replace("{testId}", testId);
+                    href = href.replace("{testReservationId}",
                             testReservationId);
-                    hrefText="继续考试";
-                }else if(testReservation.getStatus()==
-                        TestReservation.Status.ORDERED){
-                    href=urlPayment.replace("{testReservationId}",
+                    hrefText = "继续考试";
+                } else if (testReservation.getStatus() ==
+                        TestReservation.Status.ORDERED) {
+                    href = urlPayment.replace("{testReservationId}",
                             testReservationId);
-                    hrefText= "支付";
+                    hrefText = "支付";
                 }
     %>
     <tr>
@@ -98,7 +94,7 @@
     </tr>
     <%
         }
-    }else{
+    } else {
     %>
     <tr>
         <td>
@@ -123,9 +119,9 @@
         </td>
     </tr>
     <%
-        if(testResultList!=null && testResultList.size()>0){
-            for(TestResult testResult:testResultList){
-                String href= urlTestResult.replace("{testResultId}",
+        if (testResultList != null && testResultList.size() > 0) {
+            for (TestResult testResult : testResultList) {
+                String href = urlTestResult.replace("{testResultId}",
                         String.valueOf(testResult.getId()));
     %>
     <tr>
@@ -142,7 +138,7 @@
     </tr>
     <%
         }
-    }else{
+    } else {
     %>
     <tr>
         <td width="33%">
@@ -159,92 +155,3 @@
         }
     %>
 </table>
-
-<%--<table width="99%" border="0">--%>
-<%--    <tr>--%>
-<%--        <td bgcolor="#FFFFCC">--%>
-<%--            <strong>考试</strong>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-<%--    <tr>--%>
-<%--        <td>--%>
-<%--            <div align="left">--%>
-<%--                <ul>--%>
-<%--                    <li>--%>
-<%--                        <a href="testDetail.html">java</a>--%>
-<%--                    </li>--%>
-<%--                </ul>--%>
-<%--            </div>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-<%--</table>--%>
-
-<%--<table width="100%" border="0">--%>
-<%--    <tr>--%>
-<%--        <td colspan="3" bgcolor="#FFFFCC">--%>
-<%--            <strong>您预定的考试</strong>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-
-<%--    <tr>--%>
-<%--        <td width=33%>--%>
-<%--            java--%>
-<%--        </td>--%>
-<%--        <td width="31%">--%>
-<%--            Description--%>
-<%--        </td>--%>
-<%--        <td width="36%">--%>
-<%--            <a href="startTest.html">--%>
-<%--                开始考试--%>
-<%--            </a>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-
-<%--    <tr>--%>
-<%--        <td width=33%>--%>
-<%--            java--%>
-<%--        </td>--%>
-<%--        <td width="31%">--%>
-<%--            Description--%>
-<%--        </td>--%>
-<%--        <td width="36%">--%>
-<%--            <a href="payment.html">--%>
-<%--                预定考试--%>
-<%--            </a>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-
-<%--    <tr>--%>
-<%--        <td width=33%>--%>
-<%--            java--%>
-<%--        </td>--%>
-<%--        <td width="31%">--%>
-<%--            Description--%>
-<%--        </td>--%>
-<%--        <td width="36%">--%>
-<%--            <a href="startTest.html">--%>
-<%--                继续考试--%>
-<%--            </a>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-<%--</table>--%>
-
-<%--<table width="100%" border="0">--%>
-<%--    <tr>--%>
-<%--        <td colspan="3" valign="top" bgcolor="#FFFFCC">--%>
-<%--            <strong>您的考试记录</strong>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-<%--    <tr>--%>
-<%--        <td width="33%">--%>
-<%--            getStartTime()--%>
-<%--        </td>--%>
-<%--        <td width="31%">--%>
-<%--            <a href="testDetail.html">JAVA</a>--%>
-<%--        </td>--%>
-<%--        <td width="36%">--%>
-<%--            testResult().getValue());--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-
-<%--</table>--%>

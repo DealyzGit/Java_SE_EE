@@ -158,7 +158,7 @@
   </span>
 </div>
 <!--<h2 align="center">FangSoft考试中心</h2>-->
-<form action="<%=loginAction %>" method="get" name="loginForm">
+<form action="<%=loginAction %>" class="modal-content animate" method="get" name="loginForm">
     <%--<form action="testcenter.jsp" class="modal-content animate" method="post">--%>
 
     <div class="container">
@@ -184,6 +184,8 @@
         <span class="psw"><a href="loginView.jsp">忘记密码?</a></span>
     </div>
 </form>
+
+<%= errorMsg%>
 
 </body>
 </html>

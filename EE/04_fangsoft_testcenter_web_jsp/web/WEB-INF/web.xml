@@ -22,5 +22,13 @@
         <url-pattern>/allTest</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>testCenterView</servlet-name>
+        <jsp-file>/WEB-INF/testCenterView.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testCenterView</servlet-name>
+        <url-pattern>/testCenterView</url-pattern>
+    </servlet-mapping>
 
 </web-app>

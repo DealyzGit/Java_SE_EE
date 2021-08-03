@@ -13,4 +13,5 @@ public class URLConfig {
     public static final String urlPayment = "paymentView?testReservationId={testReservationId}";
     public static final String urlCommitTestAction = "commitTest";
     public static final String urlTestReservation = "reserveTest?testId={testId}";
+    public static final String urlStartTestView="";
 }
