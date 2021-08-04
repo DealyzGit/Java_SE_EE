@@ -10,6 +10,7 @@
 <%@ page import="org.fangsoft.testcenter.model.Test" %>
 <%@ page import="org.fangsoft.testcenter.model.Customer" %>
 
+<%--
 <%
     if (!JSPUtil.processNotLogin(request, response)) return;//未登录不能访问
 
@@ -46,8 +47,33 @@
 
     DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM, request.getLocale());//日期显示格式
 
-
 %>
+
+--%>
+
+<%@ taglib uri="https://fangsoft.com" prefix="tc" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+<tc:notLogined/>
+<fmt:setLocale value="${param.locale}"/>
+
+
+<jsp:useBean
+        id="testResListBean"
+        class="org.fangsoft.testcenter.web.bean.TestReservationListBean"
+        scope="page">
+    <jsp:setProperty name="testResListBean"
+                     property="userId"
+                     value="${sessionScope.session_userId.userId}"/>
+</jsp:useBean>
+
+<jsp:useBean id="testResultListBean"
+             class="org.fangsoft.testcenter.web.bean.TestResultListBean"
+             scope="page">
+    <jsp:setProperty name="testResultListBean" property="userId"
+                     value="${sessionScope.session_userId.userId}"/>
+</jsp:useBean>
 
 
 <meta charset="UTF-8">
@@ -62,18 +88,13 @@
   </span>
 </div>
 <p>
-    <%--    欢迎，tong--%>
-    欢迎，<%=userId %>
-    <%--    <a href="login.html">--%>
-    <%--        登出--%>
-    <%--    </a>--%>
 
-    <%=JSPUtil.makeLink(urlLogout, "登出") %>
-
+    欢迎，<c:out value="${sessionScope.session_userId.userId }"/>
+    <a href="logout">登出</a>
 </p>
 
-
-<jsp:include page="/WEB-INF/allTest.jsp"/>
+<tc:allTest urlTestDetail="testDetailView?testId={testId}"/>
+<%--<jsp:include page="/WEB-INF/allTest.jsp"/>--%>
 
 <table width="100%" border="0">
     <tr>
@@ -81,62 +102,61 @@
             <strong>您预定的考试</strong>
         </td>
     </tr>
-    <%
-        if (testReservationList != null && testReservationList.size() > 0) {
-            for (TestReservation testReservation : testReservationList) {
-                if (testReservation.getStatus() ==TestReservation.Status.FULFILLED) continue;
-                String href = "";
-                String hrefText = "";
-                String testReservationId =
-                        String.valueOf(testReservation.getId());
-                String testId =
-                        String.valueOf(testReservation.getTest().getId());
-                if (testReservation.getStatus() ==
-                        TestReservation.Status.PAYED) {
-                    href = urlStartTest.replace("{testId}", testId);
-                    href = href.replace("{testReservationId}",testReservationId);
-                    hrefText = "开始考试";
-                } else if (testReservation.getStatus() ==
-                        TestReservation.Status.FULFILLING) {
-                    href = urlStartTest.replace("{testId}", testId);
-                    href = href.replace("{testReservationId}",testReservationId);
-                    hrefText = "继续考试";
-                } else if (testReservation.getStatus() ==
-                        TestReservation.Status.ORDERED) {
-                    href = urlPayment.replace("{testReservationId}",testReservationId);
-                    hrefText = "支付";
-                }
-    %>
-    <tr>
-        <td>
-            <%=testReservation.getTest().getName() %>
-        </td>
-        <td>
-            <%=testReservation.getStatus().getDescription() %>
-        </td>
-        <td>
-            <%=JSPUtil.makeLink(href, hrefText) %>
-        </td>
-    </tr>
-    <%
-        }
-    } else {
-    %>
-    <tr>
-        <td>
-            N/A
-        </td>
-        <td>
-            N/A
-        </td>
-        <td>
-            N/A
-        </td>
-    </tr>
-    <%
-        }
-    %>
+    <c:choose>
+        <c:when test="${! empty pageScope.testResListBean && pageScope.testResListBean.size > 0}">
+            <c:forEach var="testRes" items="${pageScope.testResListBean.testReservationList}">
+                <c:choose>
+                    <c:when test="${testRes.status == 'PAYED'}">
+                        <c:url var="urlTestReservation" value="startTest" scope="page">
+                            <c:param name="testId" value="${testRes.test.id}"/>
+                            <c:param name="testReservationId" value="${testRes.id}"/>
+                        </c:url>
+                        <c:set var="hrefText" value="开始考试" scope="page"/>
+                    </c:when>
+                    <c:when test="${testRes.status == 'FULFILLING'}">
+                        <c:url var="urlTestReservation" value="startTest" scope="page">
+                            <c:param name="testId" value="${testRes.test.id}"/>
+                            <c:param name="testReservationId" value="${testRes.id}"/>
+                        </c:url>
+                        <c:set var="hrefText" value="继续考试" scope="page"/>
+                    </c:when>
+                    <c:when test="${testRes.status == 'ORDERED'}">
+                        <c:url var="urlTestReservation" value="paymentView" scope="page">
+                            <c:param name="testReservationId" value="${testRes.id}"/>
+                        </c:url>
+                        <c:set var="hrefText" value="支付" scope="page"/>
+                    </c:when>
+                </c:choose>
+                <tr>
+                    <td>
+                        <c:out value="${testRes.test.name}"/>
+                    </td>
+                    <td>
+                        <c:out value="${testRes.status.description}"/>
+                    </td>
+                    <td>
+                        <a href="${pageScope.urlTestReservation}">
+                            <c:out value="${pageScope.hrefText}"/></a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </c:when>
+        <c:otherwise>
+            <tr>
+                <td>
+                    N/A
+                </td>
+                <td>
+                    N/A
+                </td>
+                <td>
+                    N/A
+                </td>
+            </tr>
+        </c:otherwise>
+    </c:choose>
 </table>
+
 
 <table width="100%" border="0">
     <tr>
@@ -144,37 +164,40 @@
             <strong>您的考试记录</strong>
         </td>
     </tr>
-    <%
-        if (testResultList != null && testResultList.size() > 0) {
-            for (TestResult testResult : testResultList) {
-                String href = urlTestResult.replace("{testResultId}",String.valueOf(testResult.getId()));
-    %>
-    <tr>
-        <td width="33%">
-            <%=dateFormat.format(testResult.getStartTime()) %>
-        </td>
-        <td width="31%">
-            <%=JSPUtil.makeLink(href,testResult.getTest().getName()) %>
-        </td>
-        <td width="36%"> <%=testResult.getResult().getValue() %>
-        </td>
-    </tr>
-    <%
-        }
-    } else {
-    %>
-    <tr>
-        <td width="33%">
-            N/A
-        </td>
-        <td width="31%">
-            N/A
-        </td>
-        <td width="36%">
-            N/A
-        </td>
-    </tr>
-    <%
-        }
-    %>
+    <c:choose>
+        <c:when
+                test="${! empty pageScope.testResultListBean && pageScope.testResultListBean.size > 0}">
+            <c:forEach var="testResult" items="${pageScope.testResultListBean.testResultList}">
+                <c:url var="urlTestResult" value="testResultView" scope="page">
+                    <c:param name="testResultId" value="${testResult.id}"/>
+                </c:url>
+                <tr>
+                    <td width="33%">
+                        <fmt:formatDate type="date" dateStyle="medium" value="${testResult.startTime}"/>
+                    </td>
+                    <td width="31%">
+                        <a href="${pageScope.urlTestResult}">
+                            <c:out value="${testResult.test.name}"/></a>
+                    </td>
+                    <td width="36%">
+                        <c:out value="${testResult.result.value}"/>
+                    </td>
+                </tr>
+            </c:forEach>
+        </c:when>
+        <c:otherwise>
+            <tr>
+                <td width="33%">
+                    N/A
+                </td>
+                <td width="31%">
+                    N/A
+                </td>
+                <td width="36%">
+                    N/A
+                </td>
+            </tr>
+        </c:otherwise>
+    </c:choose>
 </table>
+

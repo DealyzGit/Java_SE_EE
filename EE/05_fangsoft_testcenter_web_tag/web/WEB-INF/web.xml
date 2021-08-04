@@ -116,4 +116,11 @@
         <url-pattern>/commitTest</url-pattern>
     </servlet-mapping>
 
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>myjstl</taglib-uri>
+            <taglib-location>/WEB-INF/tld/testCenter.tld</taglib-location>
+        </taglib>
+    </jsp-config>
 </web-app>

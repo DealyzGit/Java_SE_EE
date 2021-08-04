@@ -143,10 +143,10 @@ public class Html2WebView {
     }
 
     public static void main(String[] args) throws IOException{
-        saveHtmlViewClass("D:\\TONG\\Java\\02\\02_fangsoft_web_util\\src",
+        saveHtmlViewClass("D:\\TONG\\Java\\Java_SE_EE\\EE\\05_fangsoft_testcenter_web_tag\\02_fangsoft_web_util\\src",
                 "org.fangsoft.testcenter.web.view");
-        Html2WebView.run("D:\\TONG\\Java\\02\\02_fangsoft_web_util\\html",
-                "D:\\TONG\\Java\\02\\02_fangsoft_web_util\\src",
+        Html2WebView.run("D:\\TONG\\Java\\Java_SE_EE\\EE\\05_fangsoft_testcenter_web_tag\\02_fangsoft_web_util\\html",
+                "D:\\TONG\\Java\\Java_SE_EE\\EE\\05_fangsoft_testcenter_web_tag\\02_fangsoft_web_util\\src",
                 "org.fangsoft.testcenter.web.view");
     }
 

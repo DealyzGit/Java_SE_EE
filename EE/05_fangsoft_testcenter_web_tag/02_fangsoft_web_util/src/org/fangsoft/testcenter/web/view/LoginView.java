@@ -160,9 +160,9 @@ import java.io.PrintWriter;public class LoginView extends HtmlView{
       writer.println("        <label><b>密码：</b></label>");
       writer.println("        <input name=\"psw\" placeholder=\"输入密码\" required type=\"password\">");
       writer.println("");
-      writer.println("        <a href=\"testcenter.html\">");
-      writer.println("            <button type=\"submit\">登录</button>");
-      writer.println("        </a>");
+      writer.println("");
+      writer.println("        <button type=\"submit\">登录</button>");
+      writer.println("");
       writer.println("");
       writer.println("        <label>");
       writer.println("            <input checked=\"checked\" name=\"remember\" type=\"checkbox\"> 在此计算机上记住我的信息");

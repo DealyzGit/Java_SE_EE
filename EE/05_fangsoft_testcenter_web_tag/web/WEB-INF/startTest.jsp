@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="https://fangsoft.com" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page session="false" pageEncoding="UTF-8" %>
 <%@ page import="org.fangsoft.testcenter.web.Constants,
@@ -50,7 +51,8 @@
     </tr>
 </table>
 
-<jsp:include page="/WEB-INF/testInfo.jsp"/>
+<c:TestInfoTag testId='<%=testResult.getTest().getId()%>'/>
+<%--<jsp:include page="/WEB-INF/testInfo.jsp"/>--%>
 
 
 <table width="100%" border="0">

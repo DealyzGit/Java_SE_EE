@@ -7,7 +7,7 @@
 
     <tlib-version>1.0</tlib-version>
     <short-name>myshortname</short-name>
-    <uri>https://mycompany.com</uri>
+    <uri>https://fangsoft.com</uri>
 
     <!-- Invoke 'Generate' action to add tags or functions -->
     <tag>
@@ -35,4 +35,16 @@
 <!--        <description></description>-->
     </tag>
 
+    <tag>
+        <name>TestInfoTag</name>
+        <tag-class>org.fangsoft.testcenter.web.tag.TestInfoTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>testId</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.Integer</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
 </taglib>

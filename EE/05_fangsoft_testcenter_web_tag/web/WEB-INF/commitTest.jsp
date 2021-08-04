@@ -17,7 +17,7 @@
     int trId = -1;
     Customer customer = null;
 
-    HttpSession session1 = request.getSession(false);
+    HttpSession session1= request.getSession(false);
 
     if (session1.getAttribute(Constants.SESSION_TESTRESULT) != null) {
         testResult = (TestResult) session1.getAttribute(Constants.SESSION_TESTRESULT);

@@ -37,8 +37,7 @@ public class AllTestTag extends SimpleTagSupport {
             writer.println("                    <ul>");
             if(testList!=null){
                 for(Test t:testList){
-                    String url=this.urlTestDetail.replace("{testId}",
-                            String.valueOf(t.getId()));
+                    String url=this.urlTestDetail.replace("{testId}",String.valueOf(t.getId()));
                     writer.println("                      <li>");
                     writer.println(JSPUtil.makeLink(url, t.getName()));
                     writer.println("                      </li>");
