@@ -1,9 +1,9 @@
 <%@ page contentType="text/html; charset=utf-8" session="false" %>
-<%@ page import="org.fangsoft.web.util.CookieUtil,
-                 org.fangsoft.testcenter.web.Constants,
-                 org.fangsoft.testcenter.web.URLConfig,
-                 org.fangsoft.util.DataValidator"
-%>
+<%@ page import="org.fangsoft.web.util.CookieUtil" %>
+<%@ page import="org.fangsoft.testcenter.web.Constants" %>
+<%@ page import="org.fangsoft.testcenter.web.URLConfig" %>
+<%@ page import="org.fangsoft.util.DataValidator" %>
+
 
 <%
     String userId = CookieUtil.getCookieValue(request, Constants.COOKIE_USERID);

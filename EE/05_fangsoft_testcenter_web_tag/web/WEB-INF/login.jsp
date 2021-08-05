@@ -32,7 +32,7 @@
         HttpSession session = request.getSession();
         session.setAttribute(Constants.SESSION_USERID, customer);
         request.getRequestDispatcher("/" + URLConfig.urlTestCenterView).forward(request, response);
-        return;
+//        return;
     } else {
         request.setAttribute(Constants.REQUEST_LOGIN_ERROR_MSG,"invalid userId or password");
         request.getRequestDispatcher("/" + URLConfig.urlLoginView).forward(request, response);
