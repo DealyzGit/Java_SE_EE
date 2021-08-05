@@ -1,14 +1,13 @@
-<%@ taglib prefix="c" uri="https://fangsoft.com" %>
+import org.fangsoft.testcenter.model.ChoiceItem;
+import org.fangsoft.testcenter.model.Question;
+import org.fangsoft.testcenter.model.Test;
+import org.fangsoft.testcenter.web.URLConfig;
+
+import java.util.List;
+
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page session="false" pageEncoding="UTF-8" %>
-<%@ page import="org.fangsoft.testcenter.web.Constants,
-                 org.fangsoft.testcenter.web.JSPUtil,
-                 org.fangsoft.util.DataConverter,
-                 org.fangsoft.testcenter.web.URLConfig"
-%>
-<%@ page import="jakarta.servlet.http.HttpSession" %>
-<%@ page import="org.fangsoft.testcenter.model.*" %>
-<%@ page import="java.util.List" %>
+<%--
 <%
     response.reset();
 //    if (!JSPUtil.processNotLogin(request, response))
@@ -31,6 +30,10 @@
 //    request.getRequestDispatcher("/" + URLConfig.urlStartTestView).forward(request, response);
 %>
 
+--%>
+<%@ taglib uri="https://fangsoft.com" prefix="tc" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -51,88 +54,85 @@
     </tr>
 </table>
 
-<c:TestInfoTag testId='<%=testResult.getTest().getId()%>'/>
-<%--<jsp:include page="/WEB-INF/testInfo.jsp"/>--%>
 
-
-<table width="100%" border="0">
+<table width="100%" border="0" align="center">
     <tr>
-        <td colspan="3" valign="top" bgcolor="#FFFFCC">
-            <strong>开始考试</strong>
+        <td colspan="2" bgcolor="#FFFFCC">
+            <div align="left">
+                <strong>开始考试</strong>
+            </div>
         </td>
     </tr>
-
+    <tc:TestInfoTag test="${sessionScope.session_testResult.test}"/>
+    <tr>
+        <td>
+            <div align="left">
+                参考人：
+            </div>
+        </td>
+        <td>
+            ${sessionScope.session_userId.userId }
+        </td>
+    </tr>
 </table>
 
-<%
-    String urlCommit = URLConfig.urlCommitTestAction;
-%>
 
-<form action="<%=urlCommit%>" method="POST" name="takeTestForm " id="takeTestForm ">
-
-    <table width="100% " border="0 ">
+<form action="commitTest" method="get" name="takeTestForm">
+    <table width="100%" border="0">
         <tr>
-            <td colspan="2 " bgcolor="#FFFFCC ">
-                <div align="left ">
+            <td colspan="2" bgcolor="#FFFFCC">
+                <div align="left">
                     <strong>考试试题</strong>
                 </div>
             </td>
         </tr>
-        <%
-            Test test = testResult.getTest();
-            if (test != null && test.getQuestion() != null) {
-                List<Question> questionList = test.getQuestion();
-                for (int i = 0; i < questionList.size(); ++i) {
-                    Question q = questionList.get(i);
-        %>
-
-        <tr>
-            <td width="6%">
-                <%=i + 1%>
-            </td>
-            <td width="94%">
-                <%=q.getName()%>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-            </td>
-            <td>
-                <ol>
-                    <%
-                        List<ChoiceItem> items = q.getChoiceItem();
-                        if (items != null) {
-                            for (ChoiceItem item : items) {
-                                String id = q.getId() + "_" + item.getId();
-                    %>
-                    <li>
-                        <input type="checkbox" name="<%=id%>" id="<%=id%>">
-                        <%=item.getName()%>
-                    </li>
-
-                    <%
-                        }
-                    %>
-
-                </ol>
-            </td>
-        </tr>
-
-        <%
-
-                    }
-                }
-            }
-        %>
+        <c:if test="${!empty sessionScope.session_testResult.test && !empty sessionScope.session_testResult.test.question}">
+            <c:set var="questionNum" value="0" scope="page"></c:set>
+            <c:forEach var="question" begin="0" items="${sessionScope.session_testResult.test.question}">
+                <c:set var="questionNum" value="${pageScope.questionNum+1}" scope="page"></c:set>
+                <tr>
+                    <td width="6%">
+                            ${pageScope.questionNum }
+                    </td>
+                    <td width="94%">
+                            ${question.name}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <ol>
+                            <c:if test="${!empty question.choiceItem}">
+                                <c:forEach var="item" items="${question.choiceItem}">
+                                    <c:set var="id" value="${question.id}_${item.id}" scope="page"></c:set>
+                                    <li>
+                                        <input type="checkbox" name="${pageScope.id}"
+                                               id="${pageScope.id}"/>
+                                        <c:out value="${item.name}"/>
+                                    </li>
+                                </c:forEach>
+                            </c:if>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </c:forEach>
+        </c:if>
         <tr>
             <td colspan="2">
                 <div align="center">
-                    <input type="submit" name="button" id="button" value="完成考试"/>
+                    <input type="submit" name="button" id="button"
+                           value="完成考试"/>
                 </div>
             </td>
         </tr>
-
     </table>
 </form>
+
 </html>

@@ -23,14 +23,19 @@
 
 <%
 
-    if (!JSPUtil.processNotLogin(request, response)) return;//未登录不能访问
+//    if (!JSPUtil.processNotLogin(request, response)) return;//未登录不能访问
     String userId = JSPUtil.getCustomer(request).getUserId();
     String urlLogout = URLConfig.urlLogout;
     int testId = Integer.parseInt(request.getParameter("testId"));
     Test test = JSPUtil.getTestCenterFacade().findTestByPK(testId);
 
-
 %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="https://fangsoft.com" prefix="tc"%>
+<tc:notLogined/>
+
+
 <p>
     <%=userId%>
     <%=JSPUtil.makeLink(urlLogout, "登出") %>
@@ -65,7 +70,7 @@
 </table>
 
 
-<c:TestInfoTag testId='<%=testId%>'/>
+<tc:TestInfoTag test='${test}'/>
 <%--<jsp:include page="/WEB-INF/testInfo.jsp"/>--%>
 
 <table width="69%" border="0" align="right">

@@ -1,14 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ page import=" org.fangsoft.testcenter.model.TestReservation,
-                 org.fangsoft.testcenter.model.TestResult,
-                 org.fangsoft.testcenter.web.JSPUtil,
-                 org.fangsoft.testcenter.web.URLConfig,
-                 java.text.DateFormat,
-                 java.util.List"
-%>
-<%@ page import="java.util.Date" %>
-<%@ page import="org.fangsoft.testcenter.model.Test" %>
-<%@ page import="org.fangsoft.testcenter.model.Customer" %>
 
 <%--
 <%

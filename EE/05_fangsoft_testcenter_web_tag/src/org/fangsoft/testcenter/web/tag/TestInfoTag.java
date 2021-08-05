@@ -9,22 +9,23 @@ import org.fangsoft.testcenter.web.JSPUtil;
 import java.io.IOException;
 
 public class TestInfoTag extends SimpleTagSupport {
-    private int testId ;
+    private Test test ;
 
-    public int getTestId() {
-        return testId;
+    public Test getTest() {
+        return test;
     }
 
-    public void setTestId(int testId) {
-        this.testId = testId;
+    public void setTest(Test test) {
+        this.test = test;
     }
 
     public void doTag() throws JspException, IOException {
         try {
 
-            Test test = JSPUtil.getTestCenterFacade().findTestByPK(this.testId);
-            JspWriter writer = this.getJspContext().getOut();
+//            Test test = JSPUtil.getTestCenterFacade().findTestByPK(this.testId);
+            Test test =this.test;
 
+            JspWriter writer = this.getJspContext().getOut();
             writer.println("<table width=\"69%\" border=\"0\" align=\"right\">");
             writer.println("  <tr>");
             writer.println("    <td bgcolor=\"#FFFFCC\">");

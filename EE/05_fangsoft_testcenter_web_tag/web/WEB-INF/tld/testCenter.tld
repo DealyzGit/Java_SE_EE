@@ -39,11 +39,18 @@
         <name>TestInfoTag</name>
         <tag-class>org.fangsoft.testcenter.web.tag.TestInfoTag</tag-class>
         <body-content>empty</body-content>
+<!--        <attribute>-->
+<!--            <name>testId</name>-->
+<!--            <required>true</required>-->
+<!--            <rtexprvalue>true</rtexprvalue>-->
+<!--            <type>java.lang.Integer</type>-->
+<!--            <rtexprvalue>true</rtexprvalue>-->
+<!--        </attribute>-->
         <attribute>
-            <name>testId</name>
+            <name>test</name>
             <required>true</required>
             <rtexprvalue>true</rtexprvalue>
-            <type>java.lang.Integer</type>
+            <type>org.fangsoft.testcenter.model.Test</type>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
