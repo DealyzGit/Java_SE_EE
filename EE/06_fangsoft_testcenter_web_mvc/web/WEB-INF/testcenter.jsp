@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@ taglib uri="https://fangsoft.com" prefix="tc" %>
@@ -19,7 +18,6 @@
              scope="page">
     <jsp:setProperty name="testResultListBean" property="userId" value="${sessionScope.session_userId.userId}"/>
 </jsp:useBean>
-
 
 
 <meta charset="UTF-8">
@@ -54,7 +52,7 @@
                        items="${pageScope.testResListBean.testReservationList}">
                 <c:choose>
                     <c:when test="${testRes.status == 'PAYED'}">
-                        <c:url var="urlTestReservation" value="startTest"
+                        <c:url var="startTest.do" value="startTest"
                                scope="page">
                             <c:param name="testId" value="${testRes.test.id}"/>
                             <c:param name="testReservationId"
@@ -64,7 +62,7 @@
                                scope="page"/>
                     </c:when>
                     <c:when test="${testRes.status == 'FULFILLING'}">
-                        <c:url var="urlTestReservation" value="startTest"
+                        <c:url var="startTest.do" value="startTest"
                                scope="page">
                             <c:param name="testId" value="${testRes.test.id}"/>
                             <c:param name="testReservationId"
@@ -73,10 +71,8 @@
                         <c:set var="hrefText" value="继续考试" scope="page"/>
                     </c:when>
                     <c:when test="${testRes.status == 'ORDERED'}">
-                        <c:url var="urlTestReservation" value="paymentView"
-                               scope="page">
-                            <c:param name="testReservationId"
-                                     value="${testRes.id}"/>
+                        <c:url var="startTest.do" value="paymentView" scope="page">
+                            <c:param name="testReservationId" value="${testRes.id}"/>
                         </c:url>
                         <c:set var="hrefText" value="支付" scope="page"/>
                     </c:when>

@@ -7,13 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4217e2c-3cba-4264-87bd-4fa4982715af" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/MVCFrameworkConfigListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/ActionConfigMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/LoginAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/LogoutAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/TestCenterAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/framework/DispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/StartTestAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/testcenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/testcenter.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628228988046</updated>
       <workItem from="1628228989308" duration="92000" />
-      <workItem from="1628229099272" duration="4466000" />
+      <workItem from="1628229099272" duration="4830000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1628232299928</created>
@@ -198,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628232299928</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1628233689449</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628233689449</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
