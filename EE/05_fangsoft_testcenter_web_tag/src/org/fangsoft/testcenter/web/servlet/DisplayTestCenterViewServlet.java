@@ -50,9 +50,11 @@ public class DisplayTestCenterViewServlet extends TestCenterServlet implements S
             if (test_Id != null) {
                 int testId = Integer.parseInt(test_Id);
                 Date date = new Date();
+
                 Test testById = this.getTestCenterFacade().findTestByPK(testId);
                 Customer customer = this.getCustomer(request);
                 TestReservation testReservation = new TestReservation();
+
                 testReservation.setStatus(TestReservation.Status.ORDERED);
                 testReservation.setOrderDate(date);
                 testReservation.setTest(testById);

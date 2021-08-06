@@ -8,26 +8,33 @@ import java.util.List;
 
 public class TestReservationListBean implements Serializable {
     private String userId;
-    private List<TestReservation> testResList;
+
+    private List<TestReservation> testReservationList;
+
     public int getSize() {
-        if(this.testResList==null){
-            this.testResList= JSPUtil.getTestCenterFacade().
+        if (this.testReservationList == null) {
+            this.testReservationList = JSPUtil.getTestCenterFacade().
                     findActiveTestReservationByUserId(this.getUserId());
         }
-        return this.testResList.size();
+        return this.testReservationList.size();
     }
+
     public String getUserId() {
         return userId;
     }
+
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
+
     public List<TestReservation> getTestReservationList() {
-        if(this.testResList==null){
-            this.testResList= JSPUtil.getTestCenterFacade().
-                    findActiveTestReservationByUserId(this.getUserId());
+        if (this.testReservationList == null) {
+            this.testReservationList = JSPUtil.getTestCenterFacade().findActiveTestReservationByUserId(this.getUserId());
         }
-        return this.testResList;
+            return this.testReservationList;
     }
+
+
 }
 

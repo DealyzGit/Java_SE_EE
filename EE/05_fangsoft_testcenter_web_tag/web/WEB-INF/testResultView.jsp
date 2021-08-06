@@ -1,29 +1,15 @@
-<%@ page import="org.fangsoft.testcenter.web.JSPUtil" %>
-<%@ page import="org.fangsoft.testcenter.model.TestResult" %>
-<%@ page import="org.fangsoft.testcenter.model.Customer" %>
-<%@ page import="org.fangsoft.testcenter.web.Constants" %>
-<%@ page import="org.fangsoft.testcenter.model.Question" %>
-<%@ page import="org.fangsoft.testcenter.config.Configuration" %>
-<%@ page import="java.util.*" %>
-<%@ page import="org.fangsoft.testcenter.model.QuestionResult" %>
-<%@ page import="jakarta.servlet.http.HttpSession" %>
-<%@ page import="org.fangsoft.testcenter.web.URLConfig" %>
 <%@ page pageEncoding="UTF-8" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="org.fangsoft.testcenter.web.JSPUtil" %>
+<%@ page import="org.fangsoft.testcenter.model.TestResult" %>
+<%@ page import="org.fangsoft.testcenter.web.URLConfig" %>
+
+<%@ taglib uri="https://fangsoft.com" prefix="tc" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
 <%
-
     TestResult testResult = null;
-//    HttpSession session = request.getSession(false);
-//    int trId = -1;
-//    Customer customer = null;
-//    if (session.getAttribute(Constants.SESSION_TESTRESULT) != null) {
-//        testResult = (TestResult) session.getAttribute(Constants.SESSION_TESTRESULT);
-//    }
-//    if (session.getAttribute(Constants.SESSION_TEST_RESERVATION) != null) {
-//        trId = (int) session.getAttribute(Constants.SESSION_TEST_RESERVATION);
-//    }
     int testResultId= Integer.parseInt(request.getParameter("testResultId"));
     testResult=JSPUtil.getTestCenterFacade().getDaoFactory().getTestResultDao().findTestResultByPK(testResultId);
 %>
@@ -56,7 +42,7 @@
         </td>
 
         <td width=49%>
-            <%=testResult.getCustomer().getUserId()%>
+           <c:out value="${sessionScope.session_userId.userId}"/>
         </td>
     </tr>
     <tr>
@@ -127,6 +113,7 @@
 
 
 <table width="99%" border="0">
+
     <% for (int i = 0; i < testResult.getTest().getNumQuestion(); i++) { %>
 
     <tr>

@@ -24,9 +24,9 @@ public class TestResultListBean implements Serializable {
     }
     public List<TestResult> getTestResultList() {
         if(this.testResultList==null){
-            this.testResultList=JSPUtil.getTestCenterFacade().
-                    findTestResultByUserId(this.getUserId());
+            this.testResultList=JSPUtil.getTestCenterFacade().findTestResultByUserId(this.getUserId());
         }
         return this.testResultList;
     }
+
 }

@@ -13,6 +13,15 @@ import java.io.IOException;
 
 public class TestInfoTag extends SimpleTagSupport {
     private Test test ;
+    private int testId;
+
+    public int getTestId() {
+        return testId;
+    }
+
+    public void setTestId(int testId) {
+        this.testId = testId;
+    }
 
     public Test getTest() {
         return test;
@@ -22,12 +31,16 @@ public class TestInfoTag extends SimpleTagSupport {
         this.test = test;
     }
 
+
     public void doTag() throws JspException, IOException {
         try {
-
-//            Test test = JSPUtil.getTestCenterFacade().findTestByPK(this.testId);
-            Test test =this.test;
-
+            Test test;
+            if (this.getTest()==null){
+                test= JSPUtil.getTestCenterFacade().findTestByPK(this.testId);
+            }
+            else{
+                test =this.getTest();
+            }
             JspWriter writer = this.getJspContext().getOut();
             writer.println("<table width=\"69%\" border=\"0\" align=\"right\">");
             writer.println("  <tr>");

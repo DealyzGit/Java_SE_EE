@@ -46,10 +46,6 @@ public class TestReservationMemDao implements TestReservationDao {
         DataRepository.testReservationMapForUserId.get(userId).add(testRes);
     }
 
-//    public boolean updateStatus(int trId, TestResult.Status status) {
-//        return false;
-//    }
-
     public boolean updateStatus(int testResId, TestReservation.Status status) {
         TestReservation testRes=DataRepository.testReservationMapForPK.get(testResId);
         if(testRes!=null){

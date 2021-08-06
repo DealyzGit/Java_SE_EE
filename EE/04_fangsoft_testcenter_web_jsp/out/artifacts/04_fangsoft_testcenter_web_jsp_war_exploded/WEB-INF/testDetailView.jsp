@@ -77,6 +77,9 @@
         <%
             String urlpage="testCenterView?testId={testId}".replace("{testId}",String.valueOf(test.getId()));
         %>
+        <%
+            request.setAttribute("testId",String.valueOf(test.getId()));
+        %>
         <%=JSPUtil.makeLink(urlpage,"预定考试")%>
         </a>
     </td>

@@ -25,5 +25,23 @@
     <orderEntry type="module" module-name="00_fangsoft_testcenter_domain" exported="" />
     <orderEntry type="module" module-name="02_fangsoft_web_util" exported="" />
     <orderEntry type="library" name="Java EE 6" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/jstl.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/standard.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
