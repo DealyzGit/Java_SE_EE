@@ -14,18 +14,19 @@
     TestResult testResult;
     int testReservationId = -1;
     int testId = -1;
-    if (session.getAttribute(Constants.SESSION_TESTRESULT) != null) {
-        testResult = (TestResult) session.getAttribute(Constants.SESSION_TESTRESULT);
-
-    } else {
-        testId = DataConverter.str2Int(request.getParameter("testId"));
-        testResult = JSPUtil.getTestCenterFacade().startTest(testId, testReservationId, JSPUtil.getCustomer(request));
-    }
+//    if (session.getAttribute(Constants.SESSION_TESTRESULT) != null) {
+//        testResult = (TestResult) session.getAttribute(Constants.SESSION_TESTRESULT);
+//
+//    } else {
+    testId = DataConverter.str2Int(request.getParameter("testId"));
+    testResult = JSPUtil.getTestCenterFacade().startTest(testId, testReservationId, JSPUtil.getCustomer(request));
+//    }
     testReservationId = DataConverter.str2Int(request.getParameter("testReservationId"));
 
-    session.setAttribute("session_testresult", testRe1sult);
-    session.setAttribute("session_test_reservation", testReservationId);
-    Test test =JSPUtil.getTestCenterFacade().findTestByPK(testId);
+    session.setAttribute("session_testresult", testResult);
+    session.setAttribute("testReservationId", testReservationId);
+
+    Test test = JSPUtil.getTestCenterFacade().findTestByPK(testId);
     session.setMaxInactiveInterval(JSPUtil.getTestCenterFacade().getRemainingTestTime(testResult) + 300);
 %>
 

@@ -12,16 +12,16 @@
 <%
 
     TestResult testResult = null;
-    int trId = -1;
-    session= request.getSession(false);
+
+    session = request.getSession(false);
 
     if (session.getAttribute(Constants.SESSION_TESTRESULT) != null) {
         testResult = (TestResult) session.getAttribute(Constants.SESSION_TESTRESULT);
     }
 
-    if (session.getAttribute("session_test_reservation") != null) {
-        trId = (int) session.getAttribute("session_test_reservation");
-    }
+
+    int trId = (int) session.getAttribute("testReservationId");
+
 
     Enumeration<String> parameterNames = request.getParameterNames();
     HashMap<String, String> parameters = new HashMap<>();
@@ -56,6 +56,6 @@
     }
     JSPUtil.getTestCenterFacade().commitTest(testResult, trId);
 
-    request.getRequestDispatcher("/" + URLConfig.urlTestResult.replace("{testResultId}",String.valueOf(testResult.getTest().getId()))).forward(request, response);
+    request.getRequestDispatcher("/" + URLConfig.urlTestResult.replace("{testResultId}", String.valueOf(testResult.getTest().getId()))).forward(request, response);
 
 %>
