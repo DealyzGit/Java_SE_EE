@@ -7,14 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4217e2c-3cba-4264-87bd-4fa4982715af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/startTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/startTest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/commitTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/commitTest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/startTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/startTest.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/framework/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/framework/ActionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/framework/ResponsePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -27,7 +34,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1wLDU8vNzkt627X8FkCw5ZAflmz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,10 +49,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/javax.transaction.jar" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15485564" />
     <property name="project.structure.side.proportion" value="0.23429541" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.fangsoft.testcenter.web.framework" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
@@ -170,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628228988046</updated>
       <workItem from="1628228989308" duration="92000" />
-      <workItem from="1628229099272" duration="1859000" />
+      <workItem from="1628229099272" duration="3083000" />
     </task>
     <servers />
   </component>
@@ -188,21 +203,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/WEB-INF/startTest.jsp</url>
-          <line>17</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/WEB-INF/startTest.jsp</url>
-          <line>28</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
