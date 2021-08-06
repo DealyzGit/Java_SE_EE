@@ -22,7 +22,6 @@
 
     int trId = (int) session.getAttribute("testReservationId");
 
-
     Enumeration<String> parameterNames = request.getParameterNames();
     HashMap<String, String> parameters = new HashMap<>();
     while (parameterNames.hasMoreElements()) {

@@ -12,16 +12,11 @@
 <%
     session = request.getSession(false);
     TestResult testResult;
-    int testReservationId = -1;
-    int testId = -1;
-//    if (session.getAttribute(Constants.SESSION_TESTRESULT) != null) {
-//        testResult = (TestResult) session.getAttribute(Constants.SESSION_TESTRESULT);
-//
-//    } else {
-    testId = DataConverter.str2Int(request.getParameter("testId"));
+
+    int testId  = DataConverter.str2Int(request.getParameter("testId"));
     testResult = JSPUtil.getTestCenterFacade().startTest(testId, testReservationId, JSPUtil.getCustomer(request));
-//    }
-    testReservationId = DataConverter.str2Int(request.getParameter("testReservationId"));
+
+    int testReservationId = DataConverter.str2Int(request.getParameter("testReservationId"));
 
     session.setAttribute("session_testresult", testResult);
     session.setAttribute("testReservationId", testReservationId);

@@ -32,46 +32,36 @@ public class ActionConfigMapping {
     }
 
     static {
-//login.do
+        //login.do
         ActionConfig loginActionConfig = addActionConfig("login.do",
                 "org.fangsoft.testcenter.web.action.LoginAction");
         loginActionConfig.addResponsePage("failure", "loginView.jsp");
         loginActionConfig.addResponsePage("success", "testCenterView");
-//commitTest.do
-        ActionConfig commitTestActionConfig = addActionConfig("commitTest.do",
-                "org.fangsoft.testcenter.web.action.CommitTestAction");
-        commitTestActionConfig.addResponsePage("failure",
-                "WEB-INF/paymentReportView.jsp");
-        commitTestActionConfig.addResponsePage("success",
-                "WEB-INF/testResultView.jsp");
-        commitTestActionConfig.addResponsePage("notLogined", "loginView.jsp",
-                ResponsePage.SendMode.REDIRECT);
-//logout.do
-        ActionConfig logoutActionConfig = addActionConfig("logout.do",
-                "org.fangsoft.testcenter.web.action.LogoutAction");
-        logoutActionConfig.addResponsePage("success", "loginView.jsp",
-                ResponsePage.SendMode.REDIRECT);
-//pay.do
-        ActionConfig payActionConfig = addActionConfig("pay.do",
-                "org.fangsoft.testcenter.web.action.PayAction");
-        payActionConfig.addResponsePage("success",
-                "WEB-INF/paymentReportView.jsp");
-        payActionConfig.addResponsePage("notLogined", "loginView.jsp",
-                ResponsePage.SendMode.REDIRECT);
-// reserveTest.do
-        ActionConfig reserveTestActionConfig = addActionConfig("reserveTest.do",
-                "org.fangsoft.testcenter.web.action.ReserveTestAction");
-        reserveTestActionConfig.addResponsePage("success",
-                "WEB-INF/paymentView.jsp");
-        reserveTestActionConfig.addResponsePage("notLogined", "loginView.jsp",
-                ResponsePage.SendMode.REDIRECT);
-// startTest.do
-        ActionConfig startTestActionConfig = addActionConfig("startTest.do",
-                "org.fangsoft.testcenter.web.action.StartTestAction");
-        startTestActionConfig.addResponsePage("success",
-                "WEB-INF/startTestView.jsp");
-        startTestActionConfig.addResponsePage("notLogined", "loginView.jsp",
-                ResponsePage.SendMode.REDIRECT);
+
+        //commitTest.do
+        ActionConfig commitTestActionConfig = addActionConfig("commitTest.do", "org.fangsoft.testcenter.web.action.CommitTestAction");
+        commitTestActionConfig.addResponsePage("failure", "WEB-INF/paymentReportView.jsp");
+        commitTestActionConfig.addResponsePage("success", "WEB-INF/testResultView.jsp");
+        commitTestActionConfig.addResponsePage("notLogined", "loginView.jsp", ResponsePage.SendMode.REDIRECT);
+
+        //logout.do
+        ActionConfig logoutActionConfig = addActionConfig("logout.do", "org.fangsoft.testcenter.web.action.LogoutAction");
+        logoutActionConfig.addResponsePage("success", "loginView.jsp", ResponsePage.SendMode.REDIRECT);
+
+        //pay.do
+        ActionConfig payActionConfig = addActionConfig("pay.do", "org.fangsoft.testcenter.web.action.PayAction");
+        payActionConfig.addResponsePage("success", "WEB-INF/paymentReportView.jsp");
+        payActionConfig.addResponsePage("notLogined", "loginView.jsp", ResponsePage.SendMode.REDIRECT);
+
+        // reserveTest.do
+        ActionConfig reserveTestActionConfig = addActionConfig("reserveTest.do", "org.fangsoft.testcenter.web.action.ReserveTestAction");
+        reserveTestActionConfig.addResponsePage("success", "WEB-INF/paymentView.jsp");
+        reserveTestActionConfig.addResponsePage("notLogined", "loginView.jsp", ResponsePage.SendMode.REDIRECT);
+
+        // startTest.do
+        ActionConfig startTestActionConfig = addActionConfig("startTest.do", "org.fangsoft.testcenter.web.action.StartTestAction");
+        startTestActionConfig.addResponsePage("success", "WEB-INF/startTestView.jsp");
+        startTestActionConfig.addResponsePage("notLogined", "loginView.jsp", ResponsePage.SendMode.REDIRECT);
     }
 
 

@@ -7,9 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4217e2c-3cba-4264-87bd-4fa4982715af" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/StartTestAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/testcenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/testcenter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/commitTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/commitTest.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/startTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/startTest.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/testcenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/testcenter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/ActionConfigMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/ActionConfigMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/LoginAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/framework/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/framework/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +192,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628228988046</updated>
       <workItem from="1628228989308" duration="92000" />
-      <workItem from="1628229099272" duration="4830000" />
+      <workItem from="1628229099272" duration="5796000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1628232299928</created>
@@ -201,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628233689449</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1628234057098</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628234057098</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

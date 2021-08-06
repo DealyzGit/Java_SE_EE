@@ -14,14 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static org.fangsoft.testcenter.web.action.TestCenterAction.FAILURE;
-import static org.fangsoft.testcenter.web.action.TestCenterAction.SUCCESS;
-
 public class LoginAction extends TestCenterAction {
     public ResponsePage doProcess(HttpServletRequest request, HttpServletResponse response, ActionConfig actionConfig) throws ServletException, IOException {
         String userId = DataValidator.validate(request.getParameter("userId"));
-        String password = DataValidator.
-                validate(request.getParameter("password"));
+        String password = DataValidator.validate(request.getParameter("password"));
         if (request.getParameter("save") != null) {
             this.saveCookie(response, userId);
         }else{

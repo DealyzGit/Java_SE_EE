@@ -5,9 +5,17 @@
          version="4.0">
 
     <listener>
-        <listener-class>org.fangsoft.testcenter.web.TestTimeoutGuard</listener-class>
+        <listener-class>
+            org.fangsoft.testcenter.web.TestTimeoutGuard
+        </listener-class>
     </listener>
 
+    <listener>
+        <listener-class>
+            org.fangsoft.testcenter.web.MVCFrameworkConfigListener
+        </listener-class>
+    </listener>
+    
     <welcome-file-list>
         <welcome-file>welcomeView.jsp</welcome-file>
     </welcome-file-list>
@@ -105,7 +113,7 @@
         <url-pattern>/testResultView</url-pattern>
     </servlet-mapping>
 
-<!--    commitTest-->
+    <!--    commitTest-->
 
     <servlet>
         <servlet-name>commitTest</servlet-name>
@@ -131,4 +139,16 @@
             <taglib-location>/WEB-INF/tld/testCenter.tld</taglib-location>
         </taglib>
     </jsp-config>
+
+
+    <servlet>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <servlet-class>org.fangsoft.testcenter.web.framework.DispatcherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
