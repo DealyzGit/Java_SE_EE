@@ -10,19 +10,17 @@
 <%@ page import="org.fangsoft.testcenter.model.Test" %>
 
 <%
-    session = request.getSession(false);
-    TestResult testResult;
-
-    int testId  = DataConverter.str2Int(request.getParameter("testId"));
-    testResult = JSPUtil.getTestCenterFacade().startTest(testId, testReservationId, JSPUtil.getCustomer(request));
-
-    int testReservationId = DataConverter.str2Int(request.getParameter("testReservationId"));
-
-    session.setAttribute("session_testresult", testResult);
-    session.setAttribute("testReservationId", testReservationId);
-
+    int testId = DataConverter.str2Int(request.getParameter("testId"));
     Test test = JSPUtil.getTestCenterFacade().findTestByPK(testId);
-    session.setMaxInactiveInterval(JSPUtil.getTestCenterFacade().getRemainingTestTime(testResult) + 300);
+//    session = request.getSession(false);
+//    TestResult testResult;
+//    int testReservationId= Integer.parseInt(request.getParameter("testReservationId"));
+//    testResult = JSPUtil.getTestCenterFacade().startTest(testId, testReservationId, JSPUtil.getCustomer(request));
+
+//    session.setAttribute("session_testresult", testResult);
+//    session.setAttribute("testReservationId", testReservationId);
+//
+//    session.setMaxInactiveInterval(JSPUtil.getTestCenterFacade().getRemainingTestTime(testResult) + 300);
 %>
 
 <html>
@@ -72,7 +70,7 @@
 </table>
 
 
-<form action="commitTest" method="get" name="takeTestForm">
+<form action="commitTest.do" method="get" name="takeTestForm">
     <table width="100%" border="0">
 
         <tr>

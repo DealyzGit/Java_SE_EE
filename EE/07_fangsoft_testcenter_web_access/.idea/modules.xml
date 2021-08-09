@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/00_fangsoft_testcenter_domain/00_fangsoft_testcenter_domain.iml" filepath="$PROJECT_DIR$/00_fangsoft_testcenter_domain/00_fangsoft_testcenter_domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_fangsoft_web_util/02_fangsoft_web_util.iml" filepath="$PROJECT_DIR$/02_fangsoft_web_util/02_fangsoft_web_util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_fangsoft_testcenter_web_access.iml" filepath="$PROJECT_DIR$/07_fangsoft_testcenter_web_access.iml" />
+    </modules>
+  </component>
+</project>

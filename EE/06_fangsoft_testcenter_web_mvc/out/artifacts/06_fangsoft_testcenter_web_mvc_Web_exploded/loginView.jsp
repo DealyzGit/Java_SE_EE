@@ -1,15 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8" session="false" %>
-<%@ page import="org.fangsoft.web.util.CookieUtil" %>
-<%@ page import="org.fangsoft.testcenter.web.Constants" %>
-<%@ page import="org.fangsoft.testcenter.web.URLConfig" %>
-<%@ page import="org.fangsoft.util.DataValidator" %>
-
-
-<%
-    String userId = CookieUtil.getCookieValue(request, Constants.COOKIE_USERID);
-    String loginAction = URLConfig.urlLoginAction;
-    String errorMsg = DataValidator.validate((String) request.getAttribute(Constants.REQUEST_LOGIN_ERROR_MSG));
-%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -157,25 +147,20 @@
     </h1>
   </span>
 </div>
-<!--<h2 align="center">FangSoft考试中心</h2>-->
-<form action="<%=loginAction %>" class="modal-content animate" method="get" name="loginForm">
-    <%--<form action="testcenter.jsp" class="modal-content animate" method="post">--%>
-
+<form action="login.do" class="modal-content animate" method="get" name="loginForm">
     <div class="container">
         <label><b>用户名：</b></label>
-        <%--        <input name="uname" placeholder="输入用户名" required type="text">--%>
-        <input name="userId" type="text" id="userId" value="<%=userId %>" size="40"/>
+        <input name="userId" type="text" id="userId" value="${cookie.cookie_userId.value}"/>
 
         <label><b>密码：</b></label>
         <input name="password" placeholder="输入密码" required type="password">
 
-        <a href="WEB-INF/login.jsp">
-            <button type="submit">登录</button>
-        </a>
+        <button type="submit">登录</button>
 
         <label>
             <input checked="checked" name="remember" type="checkbox"> 在此计算机上记住我的信息
         </label>
+        <c:out value="${requestScope.request_login_error_msg}"/>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
@@ -184,8 +169,6 @@
         <span class="psw"><a href="loginView.jsp">忘记密码?</a></span>
     </div>
 </form>
-
-<%= errorMsg%>
 
 </body>
 </html>

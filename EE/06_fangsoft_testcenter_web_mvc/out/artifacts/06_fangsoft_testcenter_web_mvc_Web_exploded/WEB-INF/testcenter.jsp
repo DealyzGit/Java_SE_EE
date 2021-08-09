@@ -52,22 +52,23 @@
                        items="${pageScope.testResListBean.testReservationList}">
                 <c:choose>
                     <c:when test="${testRes.status == 'PAYED'}">
-                        <c:url var="startTest.do" value="startTest" scope="page">
+                        <c:url var="urlTestReservation" value="startTest.do" scope="page">
                             <c:param name="testId" value="${testRes.test.id}"/>
                             <c:param name="testReservationId" value="${testRes.id}"/>
                         </c:url>
                         <c:set var="hrefText" value="开始考试" scope="page"/>
                     </c:when>
                     <c:when test="${testRes.status == 'FULFILLING'}">
-                        <c:url var="startTest.do" value="startTest" scope="page">
+                        <c:url var="urlTestReservation" value="startTest.do" scope="page">
                             <c:param name="testId" value="${testRes.test.id}"/>
                             <c:param name="testReservationId" value="${testRes.id}"/>
                         </c:url>
                         <c:set var="hrefText" value="继续考试" scope="page"/>
                     </c:when>
                     <c:when test="${testRes.status == 'ORDERED'}">
-                        <c:url var="startTest.do" value="paymentView" scope="page">
-                            <c:param name="testReservationId" value="${testRes.id}"/>
+                        <c:url var="urlTestReservation" value="paymentView" scope="page">
+                            <c:param name="testReservationId"
+                                     value="${testRes.id}"/>
                         </c:url>
                         <c:set var="hrefText" value="支付" scope="page"/>
                     </c:when>

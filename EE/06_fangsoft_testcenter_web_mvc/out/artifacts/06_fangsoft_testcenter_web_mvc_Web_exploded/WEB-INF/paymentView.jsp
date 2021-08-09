@@ -8,7 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
 int testReservationId = Integer.parseInt(request.getParameter("testReservationId"));
-
 %>
 <html>
 <head>
@@ -49,9 +48,10 @@ int testReservationId = Integer.parseInt(request.getParameter("testReservationId
 
                 <div align="center">
                     <%
-                    String url = URLConfig.urlPay.replace("{testReservationId}",String.valueOf(testReservationId));
+//                    String url = URLConfig.urlPay.replace("{testReservationId}",String.valueOf(testReservationId));
+                        String url =  "pay.do?testReservationId={testReservationId}".replace("{testReservationId}",String.valueOf(testReservationId));
                     %>
-                    <a href="<%=url%>" class="button">支付</a>
+                    <a href='<%=url%>' class="button">支付</a>
                     <a href="testCenterView" class="button">放弃</a>
                 </div>
 

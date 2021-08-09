@@ -23,6 +23,7 @@
             Date date = new Date();
             Test testById = JSPUtil.getTestCenterFacade().findTestByPK(testId);
             Customer customer = JSPUtil.getCustomer(request);
+
             TestReservation testReservation = new TestReservation();
             testReservation.setStatus(TestReservation.Status.ORDERED);
             testReservation.setOrderDate(date);

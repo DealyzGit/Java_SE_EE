@@ -69,45 +69,6 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>testCenterView</servlet-name>
-        <jsp-file>/WEB-INF/testcenter.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>testCenterView</servlet-name>
-        <url-pattern>/testCenterView</url-pattern>
-    </servlet-mapping>
-
-
-    <servlet>
-        <servlet-name>testDetailView</servlet-name>
-        <jsp-file>/WEB-INF/testDetailView.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>testDetailView</servlet-name>
-        <url-pattern>/testDetailView</url-pattern>
-    </servlet-mapping>
-
-
-    <servlet>
-        <servlet-name>paymentView</servlet-name>
-        <jsp-file>/WEB-INF/paymentView.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>paymentView</servlet-name>
-        <url-pattern>/paymentView</url-pattern>
-    </servlet-mapping>
-
-
-    <servlet>
-        <servlet-name>pay</servlet-name>
-        <jsp-file>/WEB-INF/paymentReportView.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>pay</servlet-name>
-        <url-pattern>/pay</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>testResultView</servlet-name>
         <jsp-file>/WEB-INF/testResultView.jsp</jsp-file>
     </servlet>
@@ -134,7 +95,6 @@
         <url-pattern>/reserveTest</url-pattern>
     </servlet-mapping>
 
-
 -->
 
     <jsp-config>
@@ -153,8 +113,51 @@
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>testCenterView</servlet-name>
+        <jsp-file>/WEB-INF/testcenter.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testCenterView</servlet-name>
+        <url-pattern>/testCenterView</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>paymentView</servlet-name>
+        <jsp-file>/WEB-INF/paymentView.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>paymentView</servlet-name>
+        <url-pattern>/paymentView</url-pattern>
+    </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>pay</servlet-name>
+        <jsp-file>/WEB-INF/paymentReportView.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pay</servlet-name>
+        <url-pattern>/pay</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>testDetailView</servlet-name>
+        <jsp-file>/WEB-INF/testDetailView.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testDetailView</servlet-name>
+        <url-pattern>/testDetailView</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>testResultView</servlet-name>
+        <jsp-file>/WEB-INF/testResultView.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testResultView</servlet-name>
+        <url-pattern>/testResultView</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>

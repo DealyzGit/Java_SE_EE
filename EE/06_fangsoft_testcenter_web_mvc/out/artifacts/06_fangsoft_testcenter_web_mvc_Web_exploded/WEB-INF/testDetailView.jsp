@@ -79,7 +79,7 @@
     <tr>
         <td align="center" width=49%>
             <%
-                String urlpage = "reserveTest?testId={testId}".replace("{testId}", String.valueOf(request.getParameter("testId")));
+                String urlpage = "reserveTest.do?testId={testId}".replace("{testId}", String.valueOf(request.getParameter("testId")));
             %>
 
             <%=JSPUtil.makeLink(urlpage, "预定考试")%>

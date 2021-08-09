@@ -44,7 +44,7 @@
 <div style="background-color: rgb(255,255,204); width: 100%; height: 30%;">
     <div style="text-align:center;">
 <%--        <a href="loginView.jsp">进入fangsoft考试中心原型</a>--%>
-        <a href="loginView.jsp">进入fangsoft考试中心原型</a>
+        <a href="../loginView.jsp">进入fangsoft考试中心原型</a>
     </div>
 </div>
 
