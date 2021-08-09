@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8" session="false" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -147,21 +147,16 @@
     </h1>
   </span>
 </div>
-<!--<h2 align="center">FangSoft考试中心</h2>-->
-<form action="login" method="get" name="loginForm">
-    <%--<form action="testcenter.jsp" class="modal-content animate" method="post">--%>
 
+<form action="login.do" class="modal-content animate" method="post">
     <div class="container">
         <label><b>用户名：</b></label>
-        <%--        <input name="uname" placeholder="输入用户名" required type="text">--%>
-        <%--        <input name="userId" type="text" id="userId" value="<%=userId %>" size="40"/>--%>
-        <input name="userId" type="text" id="userId" value="${cookie.cookie_userId.value}" />
+        <input name="userId" type="text" id="userId" value="${cookie.cookie_userId.value}"/>
 
         <label><b>密码：</b></label>
         <input name="psw" placeholder="输入密码" required type="password">
 
-        <a href="testcenter.jsp">
-            <button type="submit">登录</button>
+        <a href="testcenter.jsp"> <button type="submit">登录</button>
         </a>
 
         <label>

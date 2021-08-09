@@ -8,14 +8,87 @@
   <component name="ChangeListManager">
     <list default="true" id="e4217e2c-3cba-4264-87bd-4fa4982715af" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/commitTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/commitTest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/startTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/startTest.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00_fangsoft_testcenter_domain/00_fangsoft_testcenter_domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/00_fangsoft_testcenter_domain/00_fangsoft_testcenter_domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_fangsoft_web_util/02_fangsoft_web_util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/02_fangsoft_web_util/02_fangsoft_web_util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_fangsoft_testcenter_web_mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/06_fangsoft_testcenter_web_mvc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/classes/org/fangsoft/testcenter/web/action/ActionConfigMapping.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/classes/org/fangsoft/testcenter/web/action/ActionConfigMapping.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/classes/org/fangsoft/testcenter/web/action/LoginAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/classes/org/fangsoft/testcenter/web/action/LoginAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/classes/org/fangsoft/testcenter/web/action/StartTestAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/classes/org/fangsoft/testcenter/web/action/StartTestAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/classes/org/fangsoft/testcenter/web/framework/DispatcherServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/classes/org/fangsoft/testcenter/web/framework/DispatcherServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/loginView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/testcenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/testcenter.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/06_fangsoft_testcenter_web_mvc_Web_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/ActionConfigMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/ActionConfigMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/CustomerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/DaoFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/QuestionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/TestDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/TestReservationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/TestResultDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/memory/CustomerMemDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/memory/DataRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/memory/MemDaoFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/memory/QuestionMemDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/memory/TestMemDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/memory/TestReservationMemDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/dao/memory/TestResultMemDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/data/CustomerData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/data/TestData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/model/ChoiceItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/model/Question.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/model/QuestionResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/model/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/model/TestReservation$Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/model/TestReservation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/model/TestResult$Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/model/TestResult$Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/00_fangsoft_testcenter_domain/org/fangsoft/testcenter/model/TestResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/testcenter/web/view/HtmlView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/testcenter/web/view/LoginView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/testcenter/web/view/PaymentReportView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/testcenter/web/view/PaymentView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/testcenter/web/view/StartTestView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/testcenter/web/view/TestDetailView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/testcenter/web/view/TestInfoView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/testcenter/web/view/TestResultView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/testcenter/web/view/TestcenterView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/testcenter/web/view/WelcomeView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/web/util/CookieUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/web/util/Html2ServletOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/02_fangsoft_web_util/org/fangsoft/web/util/Html2WebView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/business/TestCenterFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/config/Configuration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/JSPUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/MVCFrameworkConfigListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/TestTimeoutGuard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/URLConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/action/ActionConfigMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/action/LoginAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/action/LogoutAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/action/StartTestAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/action/TestCenterAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/bean/TestBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/bean/TestReservationListBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/bean/TestResultListBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/framework/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/framework/ActionConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/framework/DispatcherServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/framework/ResponsePage$SendMode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/framework/ResponsePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/tag/AllTestTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/tag/NotLoginedTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/tag/TestInfoTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/testcenter/web/tag/TestResultTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/util/DataConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/util/DataValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/06_fangsoft_testcenter_web_mvc/org/fangsoft/util/regx_urlpage.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/LoginAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/framework/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/framework/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/StartTestAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/fangsoft/testcenter/web/action/StartTestAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/org/fangsoft/testcenter/web/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/org/fangsoft/testcenter/web/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/loginView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/testcenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/testcenter.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,28 +141,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="06_fangsoft_testcenter_web_mvc" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="06_fangsoft_testcenter_web_mvc" />
-      <option name="filePath" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,7 +250,8 @@
       <option name="presentableId" value="Default" />
       <updated>1628228988046</updated>
       <workItem from="1628228989308" duration="92000" />
-      <workItem from="1628229099272" duration="5796000" />
+      <workItem from="1628229099272" duration="6663000" />
+      <workItem from="1628468573406" duration="4542000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1628232299928</created>
@@ -215,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628234057098</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1628235031826</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628235031826</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,5 +302,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/org/fangsoft/testcenter/web/framework/DispatcherServlet.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 24818
-  Date: 2021/8/2
-  Time: 11:00
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page language="java" pageEncoding="utf-8" session="false" %>
 <%@ page import=" org.fangsoft.testcenter.model.Customer,

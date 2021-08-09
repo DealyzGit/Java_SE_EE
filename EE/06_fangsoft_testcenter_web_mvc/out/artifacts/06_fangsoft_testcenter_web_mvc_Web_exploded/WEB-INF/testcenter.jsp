@@ -33,7 +33,7 @@
 </div>
 <p>
     欢迎，<c:out value="${sessionScope.session_userId.userId }"/>
-    <a href="logout">登出</a>
+    <a href="logout.do">登出</a>
 </p>
 
 <tc:allTest urlTestDetail="testDetailView?testId={testId}"/>
@@ -52,21 +52,16 @@
                        items="${pageScope.testResListBean.testReservationList}">
                 <c:choose>
                     <c:when test="${testRes.status == 'PAYED'}">
-                        <c:url var="startTest.do" value="startTest"
-                               scope="page">
+                        <c:url var="startTest.do" value="startTest" scope="page">
                             <c:param name="testId" value="${testRes.test.id}"/>
-                            <c:param name="testReservationId"
-                                     value="${testRes.id}"/>
+                            <c:param name="testReservationId" value="${testRes.id}"/>
                         </c:url>
-                        <c:set var="hrefText" value="开始考试"
-                               scope="page"/>
+                        <c:set var="hrefText" value="开始考试" scope="page"/>
                     </c:when>
                     <c:when test="${testRes.status == 'FULFILLING'}">
-                        <c:url var="startTest.do" value="startTest"
-                               scope="page">
+                        <c:url var="startTest.do" value="startTest" scope="page">
                             <c:param name="testId" value="${testRes.test.id}"/>
-                            <c:param name="testReservationId"
-                                     value="${testRes.id}"/>
+                            <c:param name="testReservationId" value="${testRes.id}"/>
                         </c:url>
                         <c:set var="hrefText" value="继续考试" scope="page"/>
                     </c:when>

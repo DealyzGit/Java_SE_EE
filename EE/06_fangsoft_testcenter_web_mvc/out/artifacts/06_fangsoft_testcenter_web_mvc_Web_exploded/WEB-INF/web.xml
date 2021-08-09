@@ -15,11 +15,14 @@
             org.fangsoft.testcenter.web.MVCFrameworkConfigListener
         </listener-class>
     </listener>
-    
+
+
     <welcome-file-list>
         <welcome-file>welcomeView.jsp</welcome-file>
     </welcome-file-list>
 
+
+<!--
     <servlet>
         <servlet-name>allTest</servlet-name>
         <jsp-file>/WEB-INF/allTest.jspf</jsp-file>
@@ -113,8 +116,6 @@
         <url-pattern>/testResultView</url-pattern>
     </servlet-mapping>
 
-    <!--    commitTest-->
-
     <servlet>
         <servlet-name>commitTest</servlet-name>
         <jsp-file>/WEB-INF/commitTest.jsp</jsp-file>
@@ -133,13 +134,15 @@
         <url-pattern>/reserveTest</url-pattern>
     </servlet-mapping>
 
+
+-->
+
     <jsp-config>
         <taglib>
             <taglib-uri>myjstl</taglib-uri>
             <taglib-location>/WEB-INF/tld/testCenter.tld</taglib-location>
         </taglib>
     </jsp-config>
-
 
     <servlet>
         <servlet-name>DispatcherServlet</servlet-name>
@@ -149,6 +152,9 @@
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+
+
+
 
 
 </web-app>
