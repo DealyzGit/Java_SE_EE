@@ -23,10 +23,8 @@ public class LoginAction extends TestCenterAction {
         if (request.getParameter("save") != null) {
             this.saveCookie(response, userId);
         } else {
-            CookieUtil.killCookie(request, response,
-                    Constants.COOKIE_USERID);
+            CookieUtil.killCookie(request, response, Constants.COOKIE_USERID);
         }
-
         Customer customer = this.getTestCenterFacade().login(userId, password);
         if (customer != null) {
             HttpSession session = request.getSession();

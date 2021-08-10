@@ -114,9 +114,52 @@
         <servlet-name>serverBusyView</servlet-name>
         <jsp-file>/WEB-INF/serverBusyView.jsp</jsp-file>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>serverBusyView</servlet-name>
         <url-pattern>/serverBusyView</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>loginView</servlet-name>
+        <jsp-file>/WEB-INF/loginView.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginView</servlet-name>
+        <url-pattern>/loginView</url-pattern>
+    </servlet-mapping>
+
+
+
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>securityResource</web-resource-name>
+            <url-pattern>*.do</url-pattern>
+            <url-pattern>/testCenterView</url-pattern>
+            <url-pattern>/testDetailView</url-pattern>
+            <url-pattern>/testResultView</url-pattern>
+            <url-pattern>/paymentView</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>tester</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/loginView</form-login-page>
+            <form-error-page>/WEB-INF/loginErrorView.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+
+
+
+
+
+
 
 </web-app>

@@ -42,7 +42,7 @@
         </td>
 
         <td width=49%>
-           <c:out value="${sessionScope.session_userId.userId}"/>
+           <c:out value="${pageContext.request.userPrincipal.name}"/>
         </td>
     </tr>
     <tr>

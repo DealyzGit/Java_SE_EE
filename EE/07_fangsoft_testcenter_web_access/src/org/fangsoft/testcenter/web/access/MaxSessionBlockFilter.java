@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class MaxSessionBlockFilter implements Filter {
-    public static final int MAX_SESSIONS = 2;//默认允许的最大会话数
+    public static final int MAX_SESSIONS = 1;//默认允许的最大会话数
     public static final String MAX_SESSIONS_PARAM = "maxSessions";
     public static final String SERVER_BUSY_URL_PARAM = "serverBusyURL";
     private int maxSessions;
@@ -38,8 +38,12 @@ public class MaxSessionBlockFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         ServletContext context = this.filterConfig.getServletContext();
         SessionGuardBean count = (SessionGuardBean) context.getAttribute(SessionGuardBean.APP_SESSION_GUARD);
+
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
+
+        System.out.println(count.getCount());
+
         if (count.getCount() >= this.maxSessions && httpRequest.getSession(false) == null) {
             httpRequest.getRequestDispatcher(this.serverBusyURL).forward(httpRequest, httpResponse);
             return;

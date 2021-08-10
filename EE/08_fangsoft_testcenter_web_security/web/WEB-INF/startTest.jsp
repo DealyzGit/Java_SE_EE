@@ -12,15 +12,7 @@
 <%
     int testId = DataConverter.str2Int(request.getParameter("testId"));
     Test test = JSPUtil.getTestCenterFacade().findTestByPK(testId);
-//    session = request.getSession(false);
-//    TestResult testResult;
-//    int testReservationId= Integer.parseInt(request.getParameter("testReservationId"));
-//    testResult = JSPUtil.getTestCenterFacade().startTest(testId, testReservationId, JSPUtil.getCustomer(request));
 
-//    session.setAttribute("session_testresult", testResult);
-//    session.setAttribute("testReservationId", testReservationId);
-//
-//    session.setMaxInactiveInterval(JSPUtil.getTestCenterFacade().getRemainingTestTime(testResult) + 300);
 %>
 
 <html>
@@ -64,7 +56,7 @@
             </div>
         </td>
         <td>
-            ${sessionScope.session_userId.userId }
+            ${pageContext.request.userPrincipal.name }
         </td>
     </tr>
 </table>

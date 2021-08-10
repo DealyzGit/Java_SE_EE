@@ -54,4 +54,13 @@
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
+
+    <tag>
+        <name>noCached</name>
+        <tag-class>org.fangsoft.testcenter.web.security.NoCacheTag</tag-class>
+        <body-content>empty</body-content>
+        <description></description>
+    </tag>
+
+
 </taglib>

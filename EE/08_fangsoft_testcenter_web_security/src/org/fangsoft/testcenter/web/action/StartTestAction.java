@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class StartTestAction extends TestCenterAction{
     public ResponsePage doProcess(HttpServletRequest request, HttpServletResponse response, ActionConfig actionConfig) throws ServletException, IOException {
-        if(!this.isLogined(request))return this.processNotLogin(actionConfig);
+//        if(!this.isLogined(request))return this.processNotLogin(actionConfig);
         HttpSession session=request.getSession(false);
         TestResult testResult=null;
         int testReservationId=DataConverter.str2Int(request.getParameter("testReservationId"));

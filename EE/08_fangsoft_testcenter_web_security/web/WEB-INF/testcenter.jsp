@@ -10,13 +10,13 @@
 <jsp:useBean id="testResListBean"
              class="org.fangsoft.testcenter.web.bean.TestReservationListBean"
              scope="page">
-    <jsp:setProperty name="testResListBean" property="userId" value="${sessionScope.session_userId.userId}"/>
+    <jsp:setProperty name="testResListBean" property="userId" value="${pageContext.request.userPrincipal.name}"/>
 </jsp:useBean>
 
 <jsp:useBean id="testResultListBean"
              class="org.fangsoft.testcenter.web.bean.TestResultListBean"
              scope="page">
-    <jsp:setProperty name="testResultListBean" property="userId" value="${sessionScope.session_userId.userId}"/>
+    <jsp:setProperty name="testResultListBean" property="userId" value="${pageContext.request.userPrincipal.name}"/>
 </jsp:useBean>
 
 

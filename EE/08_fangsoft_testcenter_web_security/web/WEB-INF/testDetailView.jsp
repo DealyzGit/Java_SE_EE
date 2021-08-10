@@ -21,9 +21,6 @@
 </jsp:useBean>
 
 
-<tc:notLogined />
-
-
 
 <html>
 <head>

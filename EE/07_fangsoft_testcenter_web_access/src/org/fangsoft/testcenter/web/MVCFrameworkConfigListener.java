@@ -13,8 +13,7 @@ public class MVCFrameworkConfigListener implements ServletContextListener {
     }
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext sc=sce.getServletContext();
-        sc.setAttribute(Constants.APP_REQ_2_ACTION_CONFIG,
-                ActionConfigMapping.getRequest2ActionMap());
+        sc.setAttribute(Constants.APP_REQ_2_ACTION_CONFIG, ActionConfigMapping.getRequest2ActionMap());
 
     }
 }

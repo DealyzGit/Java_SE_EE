@@ -1,0 +1,31 @@
+<Context cookies="true" className="org.apache.catalina.core.StandardContext" override="true">
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <Resource name="jdbc/testcenter"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="oracle.jdbc.OracleDriver"
+              url="jdbc:oracle:thin:@localhost:1521:fangsoft"
+              username="system"
+              password="123"
+              maxActive="20"
+              maxIdle="10"
+              maxWait="-1"
+              removeAbandoned="true"
+              removeAbandonedTimeout="60"
+              logAbandoned="true"/>
+
+
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"
+           debug="99"
+           dataSourceName="jdbc/testcenter"
+           localDataSource="true"
+           userTable="CUSTOMER"
+           userNameCol="CR_USERID"
+           userCredCol="CR_PASSWORD"
+           userRoleTable="CUSTOMER_ROLE"
+           roleNameCol="RL_ROLE"
+    />
+
+</Context>
+
+

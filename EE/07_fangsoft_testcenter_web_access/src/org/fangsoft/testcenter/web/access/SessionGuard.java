@@ -12,8 +12,8 @@ public class SessionGuard implements HttpSessionListener, ServletContextListener
 
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext context=sce.getServletContext();
-        context.setAttribute(SessionGuardBean.APP_SESSION_GUARD,
-                new SessionGuardBean());
+
+        context.setAttribute(SessionGuardBean.APP_SESSION_GUARD, new SessionGuardBean());
     }
 
     public void contextDestroyed(ServletContextEvent sce) {
@@ -24,8 +24,7 @@ public class SessionGuard implements HttpSessionListener, ServletContextListener
     private SessionGuardBean getSessionGuardBean(HttpSessionEvent se) {
         HttpSession session=se.getSession();
         ServletContext context=session.getServletContext();
-        SessionGuardBean countBean=(SessionGuardBean)context.
-                getAttribute(SessionGuardBean.APP_SESSION_GUARD);
+        SessionGuardBean countBean=(SessionGuardBean)context.getAttribute(SessionGuardBean.APP_SESSION_GUARD);
         return countBean;
     }
     public void sessionCreated(HttpSessionEvent se) {

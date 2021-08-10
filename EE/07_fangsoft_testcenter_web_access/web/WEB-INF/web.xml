@@ -27,7 +27,7 @@
         </filter-class>
         <init-param>
             <param-name>maxSessions</param-name>
-            <param-value>3</param-value>
+            <param-value>1</param-value>
         </init-param>
         <init-param>
             <param-name>serverBusyURL</param-name>
