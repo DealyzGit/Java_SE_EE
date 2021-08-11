@@ -28,15 +28,18 @@ public class TestCenterAction implements Action {
         return TestCenterFacade.getInstance();
     }
 
-    //    public Customer getCustomer(HttpServletRequest request) {
+
+//        public Customer getCustomer(HttpServletRequest request) {
 //        HttpSession session=request.getSession(false);
 //        return  (Customer)session.getAttribute(Constants.SESSION_USERID);
 //    }
+
     public Customer getCustomer(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         if (session == null) return null;
         Customer customer = (Customer) session.getAttribute(Constants.SESSION_USERID);
         if (customer == null) {
+            System.out.println(request.getUserPrincipal().getName());
             customer = JSPUtil.getTestCenterFacade().getDaoFactory().getCustomerDao().findByUserId(request.getUserPrincipal().getName());
 //        customer =JSPUtil.getTestCenterFacade().findCustomerByUserId(request.getUserPrincipal().getName());
             session.setAttribute(Constants.SESSION_USERID, customer);

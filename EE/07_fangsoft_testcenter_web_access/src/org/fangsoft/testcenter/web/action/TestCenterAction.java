@@ -29,8 +29,7 @@ public class TestCenterAction implements Action {
 
     public Customer getCustomer(HttpServletRequest request) {
         HttpSession session=request.getSession(false);
-        return  (Customer)session.
-                getAttribute(Constants.SESSION_USERID);
+        return  (Customer)session.getAttribute(Constants.SESSION_USERID);
     }
 
     protected boolean isLogined(HttpServletRequest request){
