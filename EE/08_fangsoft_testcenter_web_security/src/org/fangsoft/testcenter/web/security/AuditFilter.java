@@ -11,7 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class AuditFilter {
+public class AuditFilter implements Filter{
 
 
     public static final String PARAM_LOG_FILE = "fileName";//日志文件名

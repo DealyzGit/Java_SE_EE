@@ -205,7 +205,7 @@
 
     <filter>
         <filter-name>auditFilter</filter-name>
-        <filter-class>org.fangsoft.web.security.AuditFilter</filter-class>
+        <filter-class>org.fangsoft.testcenter.web.security.AuditFilter</filter-class>
         <init-param>
             <param-name>logFileName</param-name>
             <param-value>log/audit.log</param-value>

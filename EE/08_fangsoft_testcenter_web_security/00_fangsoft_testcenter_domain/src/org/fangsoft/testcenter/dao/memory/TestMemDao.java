@@ -18,6 +18,12 @@ public class TestMemDao implements TestDao {
         return t;
     }
 
+    public void addTest(Test test){
+        int index=DataRepository.testMap.size();
+        DataRepository.testMap.put(index+1,test);
+
+    }
+
     public Test findTestByPK(int id) {
         Test test= DataRepository.testMap.get(id);
         if(test!=null){

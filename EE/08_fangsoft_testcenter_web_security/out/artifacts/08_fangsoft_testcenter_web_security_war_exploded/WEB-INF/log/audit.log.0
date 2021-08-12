@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="GBK" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-08-11T11:44:07</date>
+  <millis>1628653447547</millis>
+  <sequence>48</sequence>
+  <logger>audit</logger>
+  <level>INFO</level>
+  <class>org.fangsoft.testcenter.web.security.AuditFilter</class>
+  <method>doFilter</method>
+  <thread>23</thread>
+  <message>tong visit /reserveTest.do at:Wed Aug 11 11:44:07 CST 2021</message>
+</record>
+<record>
+  <date>2021-08-11T11:44:07</date>
+  <millis>1628653447547</millis>
+  <sequence>49</sequence>
+  <logger>audit</logger>
+  <level>INFO</level>
+  <class>org.fangsoft.testcenter.web.security.AuditFilter</class>
+  <method>doFilter</method>
+  <thread>23</thread>
+  <message>client IP:0:0:0:0:0:0:0:1</message>
+</record>
+<record>
+  <date>2021-08-11T11:44:07</date>
+  <millis>1628653447590</millis>
+  <sequence>50</sequence>
+  <logger>audit</logger>
+  <level>INFO</level>
+  <class>org.fangsoft.testcenter.web.security.AuditFilter</class>
+  <method>doFilter</method>
+  <thread>23</thread>
+  <message>response /reserveTest.do has spent:43(mill sconds)</message>
+</record>
+<record>
+  <date>2021-08-11T11:44:09</date>
+  <millis>1628653449360</millis>
+  <sequence>51</sequence>
+  <logger>audit</logger>
+  <level>INFO</level>
+  <class>org.fangsoft.testcenter.web.security.AuditFilter</class>
+  <method>doFilter</method>
+  <thread>22</thread>
+  <message>tong visit /pay.do at:Wed Aug 11 11:44:09 CST 2021</message>
+</record>
+<record>
+  <date>2021-08-11T11:44:09</date>
+  <millis>1628653449362</millis>
+  <sequence>52</sequence>
+  <logger>audit</logger>
+  <level>INFO</level>
+  <class>org.fangsoft.testcenter.web.security.AuditFilter</class>
+  <method>doFilter</method>
+  <thread>22</thread>
+  <message>client IP:0:0:0:0:0:0:0:1</message>
+</record>
+<record>
+  <date>2021-08-11T11:44:09</date>
+  <millis>1628653449364</millis>
+  <sequence>53</sequence>
+  <logger>audit</logger>
+  <level>INFO</level>
+  <class>org.fangsoft.testcenter.web.security.AuditFilter</class>
+  <method>doFilter</method>
+  <thread>22</thread>
+  <message>response /pay.do has spent:4(mill sconds)</message>
+</record>
