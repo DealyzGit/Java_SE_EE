@@ -11,7 +11,7 @@ public class Hello {
         this.name = name;
     }
 
-    public void show(){
-        System.out.println("Hello"+name);
+    public String show(){
+        return "Hello:"+name;
     }
 }

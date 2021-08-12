@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.psbc.www.Address">
+        <property name="addrss" value="123"/>
+    </bean>
+    <bean id="Student" class="com.psbc.www.Student">
+        <property name="name" value="tong"/>
+        <property name="adress" ref="address"/>
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+            </array>
+        </property>
+
+        <property name="hobbys">
+            <list>
+                <value>听歌</value>
+                <value>代码</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="身份证" value="123456789123456789"/>
+                <entry key="银行卡" value="213435465785645423"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>COC</value>
+                <value>BOB</value>
+            </set>
+        </property>
+<!--        <property name="wife">-->
+<!--            <null/>-->
+<!--        </property>-->
+        <property name="properties">
+            <props>
+                <prop key="学号">20210813</prop>
+                <prop key="性别">男</prop>
+                <prop key="username">root</prop>
+                <prop key="password">123</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

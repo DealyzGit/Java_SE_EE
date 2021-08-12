@@ -1,13 +1,14 @@
-
-import com.psbc.www.service.UserServiceImpl;
+import com.psbc.www.Person;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyTest {
-    public static void main(String[] args) {
-
+    @Test
+    public void test() {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        UserServiceImpl userServiceImpl = (UserServiceImpl) context.getBean("UserServiceImpl");
-        userServiceImpl.getUser();
+        Person person = context.getBean("Person", Person.class);
+        person.getCat().shout();
+        person.getDog().shout();
     }
 }

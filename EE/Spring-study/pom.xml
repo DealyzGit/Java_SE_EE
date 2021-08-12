@@ -11,6 +11,9 @@
     <modules>
         <module>spring-02-hellospring</module>
         <module>spring-01-ioc1</module>
+        <module>spring-03-ioc2</module>
+        <module>spring-04-di</module>
+        <module>spring-05-Autowired</module>
     </modules>
 
     <dependencies>
@@ -18,6 +21,12 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>5.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

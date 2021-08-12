@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="Person" class="com.psbc.www.Person" autowire="byType">
+        <property name="name" value="Tong"/>
+<!--        <property name="cat" ref="Cat"/>-->
+<!--        <property name="dog" ref="Dog"/>-->
+    </bean>
+
+    <bean  class="com.psbc.www.Cat">
+
+    </bean>
+
+    <bean  class="com.psbc.www.Dog">
+
+    </bean>
+</beans>
