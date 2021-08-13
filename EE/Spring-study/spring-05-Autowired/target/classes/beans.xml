@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean name="Person" class="com.psbc.www.Person" autowire="byType">
-        <property name="name" value="Tong"/>
-<!--        <property name="cat" ref="Cat"/>-->
-<!--        <property name="dog" ref="Dog"/>-->
-    </bean>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean  class="com.psbc.www.Cat">
+    <bean id="person" class="com.psbc.www.Person"/>
+    <bean id="cat" class="com.psbc.www.Cat"/>
+    <bean id="dog" class="com.psbc.www.Dog"/>
+    <bean id="dog222" class="com.psbc.www.Dog"/>
 
-    </bean>
 
-    <bean  class="com.psbc.www.Dog">
-
-    </bean>
+    <context:annotation-config/>
 </beans>

@@ -5,11 +5,11 @@
        xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="User" class="com.psbc.www.User" p:name="tong" p:age="18">
+    <bean id="User" class="com.psbc.www.User" p:name="tong" p:age="18" >
 
     </bean>
 
-    <bean id="User2" class="com.psbc.www.User" c:age="18" c:name="tong">
+    <bean id="User2" class="com.psbc.www.User" c:age="18" c:name="tong" scope="singleton">
 
     </bean>
 </beans>

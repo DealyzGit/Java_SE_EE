@@ -1,6 +1,12 @@
 package com.psbc.www;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import javax.annotation.Resource;
+
 public class Person {
+
     private String name;
 
     public String getName() {
@@ -27,7 +33,10 @@ public class Person {
         this.cat = cat;
     }
 
+    @Autowired
+    @Qualifier(value = "dog222")
     private Dog dog;
+    @Autowired
     private Cat cat;
 
     @Override
