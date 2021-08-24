@@ -7,7 +7,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Dashboard Template for Bootstrap</title>
+		<title>Dashboard</title>
 		<!-- Bootstrap core CSS -->
 		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
 
@@ -52,8 +52,6 @@
 				<!--侧边栏-->
 				<!--传递参数给组件-->
 				<div th:replace="~{commons/commons::sidebar(active='main.html')}"></div>
-
-
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 					<div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
 						<div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">

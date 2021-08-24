@@ -11,13 +11,12 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 public class LoginController {
-    @RequestMapping("/user/login")
 
+    @RequestMapping("/user/login")
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
                         Model model, HttpSession session){
         if(StringUtils.hasLength(username) && "123456".equals(password)){
-
             session.setAttribute("loginUser",username);
             return "redirect:/main.html";
 
