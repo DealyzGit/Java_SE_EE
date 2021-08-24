@@ -18,6 +18,7 @@
     <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
 
     <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty({msg})}"></p>
+    
     <input type="text" name="username" class="form-control" th:placeholder="#{login.username}" required="" autofocus="">
     <input type="password" name="password" class="form-control" th:placeholder="#{login.password}" required="">
     <div class="checkbox mb-3">
