@@ -19,14 +19,18 @@ public class DruidConfig {
         return new DruidDataSource();
     }
 
+    @Bean
     public ServletRegistrationBean StatViewServlet(){
 
         ServletRegistrationBean<StatViewServlet> bean = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/*");
 
         HashMap<String, String> initParameters = new HashMap<>();
 
-        initParameters.put("LoginUsername","root");
+        initParameters.put("LoginUsername","admin");
         initParameters.put("LoginPassword","123");
+
+        initParameters.put("allow","");
+
 
         bean.setInitParameters(initParameters);
 
