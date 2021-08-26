@@ -7,18 +7,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hell-shiro" />
+        <module name="shrio-springboot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hell-shiro" target="1.5" />
       <module name="hello-shrio" target="1.8" />
+      <module name="shrio-springboot" target="1.8" />
       <module name="springboot-07-shrio" target="1.5" />
+      <module name="springboot-shrio" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="hello-shrio" options="-parameters" />
+      <module name="shrio-springboot" options="-parameters" />
       <module name="springboot-07-shrio" options="-parameters" />
+      <module name="springboot-shrio" options="" />
     </option>
   </component>
 </project>
