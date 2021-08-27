@@ -1,5 +1,10 @@
 package com.example.controller;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,27 +13,44 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MyController {
 
-    @GetMapping({"/index","/"})
-    public String toIndex(Model model){
-        model.addAttribute("msg","hello shrio");
+    @GetMapping({"/index", "/"})
+    public String toIndex(Model model) {
+        model.addAttribute("msg", "hello shrio");
         return "index";
     }
 
     @RequestMapping("/user/add")
-    public String add(){
+    public String add() {
         return "user/add";
     }
 
 
     @RequestMapping("/user/update")
-    public String update(){
+    public String update() {
         return "user/update";
     }
 
     @GetMapping("/tologin")
-    public String toLogin(){
+    public String toLogin() {
 
         return "login";
     }
+
+    @RequestMapping("/login")
+    public String login(String username, String password,Model model) {
+
+        Subject subject = SecurityUtils.getSubject();
+        UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+        try {
+            subject.login(token);
+        } catch (UnknownAccountException e) {
+            model.addAttribute("msg","name error");
+        }catch (IncorrectCredentialsException e){
+            model.addAttribute("msg","password error");
+        }
+
+        return "index";
+    }
+
 
 }
