@@ -19,7 +19,7 @@ public class ShrioConfig {
         Map<String, String> filterMap = new LinkedHashMap<>();
         filterMap.put("/user/add", "authc");
         filterMap.put("/user/update", "authc");
-
+        filterMap.put("/user/add","perms[user:add]");
         bean.setFilterChainDefinitionMap(filterMap);
         bean.setLoginUrl("/tologin");
         return bean;
