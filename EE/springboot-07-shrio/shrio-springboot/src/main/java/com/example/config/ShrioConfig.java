@@ -16,12 +16,17 @@ public class ShrioConfig {
     public ShiroFilterFactoryBean getShiroFilterFactoryBean(@Qualifier("securityManager") DefaultWebSecurityManager defaultWebSecurityManager) {
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
         bean.setSecurityManager(defaultWebSecurityManager);
+
         Map<String, String> filterMap = new LinkedHashMap<>();
-        filterMap.put("/user/add", "authc");
-        filterMap.put("/user/update", "authc");
+
         filterMap.put("/user/add","perms[user:add]");
+        filterMap.put("/user/update","perms[user:update]");
+        filterMap.put("/user/*", "authc");
+
+
         bean.setFilterChainDefinitionMap(filterMap);
         bean.setLoginUrl("/tologin");
+        bean.setUnauthorizedUrl("/noauth");
         return bean;
     }
 
