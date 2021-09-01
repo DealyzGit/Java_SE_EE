@@ -10,6 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc5dad08-988f-4e73-baca-641417e6ca9f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-api/src/main/java/com/psbc/springcloud/pojo/Dept.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-provider-dept-8001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-provider-dept-8001/src/main/java/com/psbc/springcloud/dao/DeptDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-provider-dept-8001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-provider-dept-8001/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringCloud/springcloud/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringCloud/springcloud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,9 +62,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.23429541" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -185,6 +194,8 @@
       <workItem from="1629340608878" duration="3000" />
       <workItem from="1629366169564" duration="97000" />
       <workItem from="1629419624964" duration="3000" />
+      <workItem from="1630396313037" duration="315000" />
+      <workItem from="1630399202869" duration="359000" />
     </task>
     <servers />
   </component>
