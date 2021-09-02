@@ -1,0 +1,26 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+  instance:
+    instance-id: springcloud-zuul-9527 # 修改eureka上的默认描述信息
+    prefer-ip-address: true
+info:
+  app.name: tong
+  company.name: psbc online
+
+
+# 路由网关配置
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-dept
+    mydept.path: /mydept/**
+  # 不能再使用这个路径访问了，ignore : 忽略 | “*” 隐藏全部的微服务真实路径
+  ignored-services: "*"
+  prefix: /tong # 公共设置的前缀
