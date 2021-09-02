@@ -4,7 +4,6 @@ package com.psbc.springcloud.controller;
 import com.psbc.springcloud.pojo.Dept;
 import com.psbc.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,7 +42,7 @@ public class DeptController {
         List<String> services = client.getServices();
         System.out.println(services);
 
-        client.getInstances("SPRINGCLOUD-PROVIDER-DEPT-8001");
+        client.getInstances("SPRINGCLOUD-PROVIDER-DEPT");
         for (String instance : services
         ) {
             System.out.println(instance);

@@ -43,7 +43,7 @@ public class DeptController {
         List<String> services = client.getServices();
         System.out.println(services);
 
-        client.getInstances("SPRINGCLOUD-PROVIDER-DEPT-8001");
+        client.getInstances("SPRINGCLOUD-PROVIDER-DEPT");
         for (String instance : services
         ) {
             System.out.println(instance);

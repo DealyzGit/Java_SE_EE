@@ -17,7 +17,7 @@ public class consumerController {
 
     //    private static final String REST_URL_PREFIX = "http://localhost:8001/";
     //    SPRINGCLOUD-PROVIDER-DEPT-8001
-    private static final String REST_URL_PREFIX = "http://springcloud-provider-dept-8001";
+    private static final String REST_URL_PREFIX = "http://springcloud-provider-dept";
 
     @RequestMapping("/consumer/dept/add")
     public boolean add(Dept dept) {
