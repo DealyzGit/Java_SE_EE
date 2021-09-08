@@ -46,7 +46,7 @@ public class TestVariables1 {
 //        流程定义的Key
         String key = "myEvection2";
 //        流程变量的map
-        Map<String,Object> variables = new HashMap<>();
+        Map<String,Object> variables = new HashMap<String, Object>();
 //        设置流程变量
         Evection evection = new Evection();
 //        设置出差日期

@@ -43,7 +43,7 @@ public class ActivitiGatewayInclusive {
 //        流程定义key
         String key = "inclusive";
 //       创建变量集合
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<String, Object>();
 //        创建出差pojo对象
         Evection evection = new Evection();
 //        设置出差天数

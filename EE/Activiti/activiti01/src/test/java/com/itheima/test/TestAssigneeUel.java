@@ -41,7 +41,7 @@ public class TestAssigneeUel {
 //        获取RunTimeService
         RuntimeService runtimeService = processEngine.getRuntimeService();
 //        设定assignee的值，用来替换uel表达式
-        Map<String,Object> assigneeMap = new HashMap<>();
+        Map<String,Object> assigneeMap = new HashMap<String, Object>();
         assigneeMap.put("assignee0","张三");
         assigneeMap.put("assignee1","李经理");
         assigneeMap.put("assignee2","王总经理");

@@ -47,7 +47,7 @@ public class TestVariables2Complete {
 //        流程定义的Key
         String key = "myEvection2";
 //        流程变量的map
-        Map<String,Object> variables = new HashMap<>();
+        Map<String,Object> variables = new HashMap<String, Object>();
 //        设置流程变量
 //        Evection evection = new Evection();
 ////        设置出差日期
@@ -81,7 +81,7 @@ public class TestVariables2Complete {
         Evection evection = new Evection();
 //        设置出差时间
         evection.setNum(2d);
-        Map<String,Object> map = new HashMap<>();
+        Map<String,Object> map = new HashMap<String, Object>();
         map.put("evection",evection);
         //        获取流程引擎
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();

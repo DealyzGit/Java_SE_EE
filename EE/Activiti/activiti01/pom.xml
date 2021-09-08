@@ -8,6 +8,7 @@
     <artifactId>activiti01</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
     <!-- activiti 的相关包 mysql的驱动包 mybatis log4j 数据库链接池-->
     <properties>
         <slf4j.version>1.6.6</slf4j.version>
