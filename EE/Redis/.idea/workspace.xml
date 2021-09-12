@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b1fc237-de97-4966-8066-9898cc413e1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-01-jedis/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-01-jedis/src/main/java/com/psbc/base/TestHash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-01-jedis/src/main/java/com/psbc/base/TestKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-01-jedis/src/main/java/com/psbc/base/TestList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-01-jedis/src/main/java/com/psbc/base/TestPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-01-jedis/src/main/java/com/psbc/base/TestPing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-01-jedis/src/main/java/com/psbc/base/TestSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-01-jedis/src/main/java/com/psbc/base/TestString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-01-jedis/src/main/java/com/psbc/multi/TestMulti.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-01-jedis/src/main/java/com/psbc/ping/Ping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Activiti/Activiti01/.idea/junitgenerator-prj-settings.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-02-springboot/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/main/java/com/psbc/Redis02SpringbootApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/main/java/com/psbc/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/main/java/com/psbc/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/main/java/com/psbc/utils/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/test/java/com/psbc/Redis02SpringbootApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +49,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/redis-02-springboot/src/main/java/com/psbc" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TONG\Java\Java_SE_EE\EE\Redis\redis-02-springboot\src\main\java\com\psbc" />
+      <recent name="D:\TONG\Java\Java_SE_EE\EE\Redis\redis-02-springboot\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.TestString">
     <configuration name="TestPing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -83,13 +88,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Redis02SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="redis-02-springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.psbc.Redis02SpringbootApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,7 +123,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1631418179963</updated>
-      <workItem from="1631418181463" duration="744000" />
+      <workItem from="1631418181463" duration="1327000" />
+      <workItem from="1631419711164" duration="2029000" />
     </task>
     <servers />
   </component>
@@ -126,6 +141,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
