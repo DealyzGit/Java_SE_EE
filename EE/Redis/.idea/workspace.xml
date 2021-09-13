@@ -5,17 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b1fc237-de97-4966-8066-9898cc413e1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-02-springboot/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/main/java/com/psbc/Redis02SpringbootApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/main/java/com/psbc/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/main/java/com/psbc/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/main/java/com/psbc/utils/RedisUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-02-springboot/src/test/java/com/psbc/Redis02SpringbootApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,19 +77,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Redis02SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="redis-02-springboot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.psbc.Redis02SpringbootApplication" />
@@ -124,7 +100,8 @@
       <option name="presentableId" value="Default" />
       <updated>1631418179963</updated>
       <workItem from="1631418181463" duration="1327000" />
-      <workItem from="1631419711164" duration="2029000" />
+      <workItem from="1631419711164" duration="2651000" />
+      <workItem from="1631499592794" duration="5000" />
     </task>
     <servers />
   </component>
