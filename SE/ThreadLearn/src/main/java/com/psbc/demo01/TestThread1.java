@@ -13,7 +13,7 @@ public class TestThread1 extends Thread {
 
         TestThread1 thread1 = new TestThread1();
         thread1.start();
-        
+
         for (int i = 0; i < 200; i++) {
             System.out.println("2. reading code...."+i);
         }
