@@ -10,16 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc5dad08-988f-4e73-baca-641417e6ca9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-api/src/main/java/com/psbc/springcloud/pojo/Dept.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-provider-dept-8001/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-provider-dept-8001/src/main/java/com/psbc/springcloud/dao/DeptDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-provider-dept-8001/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/springcloud-provider-dept-8001/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringCloud/springcloud/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringCloud/springcloud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud/springcloud/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ssmbuild.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9be6ae0-cc40-467c-bb0e-fcfe14268522.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f9be6ae0-cc40-467c-bb0e-fcfe14268522.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ssmbuild_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ssmbuild_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +59,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.23429541" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -73,28 +69,18 @@
       <recent name="D:\TONG\Java\Java_SE_EE\EE\ssmbuild\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.69">
-    <configuration name="MyTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssmbuild" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 8.5.69" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.69" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.69" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.69" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="ssmbuild:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/ssmbuild_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="e7133810-2bd3-49b2-9bd8-1087a5fa3e7d" />
+        <option name="BASE_DIRECTORY_NAME" value="2b5ea70a-5bc1-4630-86de-3338a51a24db" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -102,7 +88,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="65063" />
+        <option name="DEBUG_PORT" value="56510" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -171,15 +157,6 @@
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.MyTest.test" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.69" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.MyTest.test" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -196,6 +173,7 @@
       <workItem from="1629419624964" duration="3000" />
       <workItem from="1630396313037" duration="315000" />
       <workItem from="1630399202869" duration="359000" />
+      <workItem from="1635348495528" duration="1035000" />
     </task>
     <servers />
   </component>
