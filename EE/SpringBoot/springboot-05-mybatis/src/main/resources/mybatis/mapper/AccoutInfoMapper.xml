@@ -6,8 +6,14 @@
 
     <select id="selectByPrimaryKey" resultType="AccountInfo">
         select *
-        from ta.account_info
+        from mybatis.account_info
         where TAAccountID = #{TAAccountID}
+    </select>
+
+
+    <select id="queryAccountInfoList" resultType="AccountInfo">
+        select *
+        from mybatis.account_info
     </select>
 
 </mapper>

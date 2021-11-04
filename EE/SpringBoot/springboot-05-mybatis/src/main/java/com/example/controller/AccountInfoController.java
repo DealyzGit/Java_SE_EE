@@ -8,14 +8,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class AccountInfoController {
     @Autowired
     private AccountInfoMapper accountInfoMapper;
 
-    @RequestMapping(path = {"/queryAccountInfo/{id}"})
-    public AccountInfo queryAccountInfo(@PathVariable("String") String TAAccountID) {
-        return accountInfoMapper.selectByPrimaryKey(TAAccountID);
+    @RequestMapping(path = {"/queryAccountInfoList"})
+    public List<AccountInfo> queryAccountInfoList() {
+        return accountInfoMapper.queryAccountInfoList();
     }
 
 }
